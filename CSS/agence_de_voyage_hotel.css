@@ -3,7 +3,9 @@ Applique le modèle de boîte border-box à tous les éléments,
 y compris leurs pseudo-éléments ::before et ::after. 
 Cela rend le dimensionnement plus prévisible (padding et border inclus dans la largeur/hauteur).
 */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
@@ -15,7 +17,8 @@ Hérite aussi la police des éléments parents pour éviter les incohérences de
 * {
     margin: 0;
     padding: 0;
-    font: inherit;
+    font:inherit;
+    font-family: "Poppins", sans-serif;
 }
 
 /* 
@@ -39,7 +42,10 @@ Assure que les médias s’affichent en bloc (pas inline par défaut)
 et ne dépassent jamais la largeur de leur conteneur. 
 Cela évite les débordements indésirables.
 */
-img, picture, svg, video {
+img,
+picture,
+svg,
+video {
     display: block;
     max-width: 100%;
 }
@@ -69,49 +75,100 @@ figcaption {
     text-wrap: pretty;
     max-width: 65ch;
 }
+/* section{
+    padding: 20px 8%;
+} */
 
 
-.hero{
+.hero {
     background-image: url(../img/section_hero/hero_hotel.png);
-    background-size:cover; 
-    background-position: center; 
+    background-size: cover;
+    background-position: center;
     max-width: 100%;
     min-height: 100dvh;
     position: relative;
 }
-.titres-hero{
-    display:flex; 
-    flex-flow:column nowrap;
+
+.logo img {
+    max-width: 5em;
+    margin-top: 10px;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+nav{
+    background-image: linear-gradient(to bottom,#c5c5c5, #c5c5c58f, transparent);
+    
+}
+.descktop,
+ul {
+    color: white;
+    text-decoration: none;
+    list-style-type: none;
+    display: flex;
+    gap: 30px;
+    padding: 10px 25px;
+    font-weight: bold;
+    color: #03759b;
+    transition: 0.5s;
+}
+
+.descktop,
+ul li {
+    padding: 10px;
+}
+
+.descktop,
+ul li:hover {
+    background-color: #00bfff;
+    color: #ffffff;
+    border-radius: 10px;
+}
+
+
+.titres-hero {
+    display: flex;
+    flex-flow: column nowrap;
     gap: 2rem;
     align-items: center;
     margin-top: 3rem;
 }
 
-h1{
-    font-family: "Poppins", sans-serif;
-    font-size: 7rem;
-    font-weight:700;
-    text-shadow: 1px 1px 1px white;
-    color: #23345D;
+h1 {
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 5.625rem;
+    box-sizing: ;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    margin-top: 15%;
+    align-items: center;
 }
 
-.ss-t-hero{
+.ss-t-hero {
     font-family: "Poppins", sans-serif;
-    font-size: 5rem;
-    font-weight:600;
-    text-shadow: 1px 1px 1px #162139;
     color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 50px;
+    margin-top: -10px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
 /* fondu bleu foncé */
-.fondu_bf{
-    position: absolute; 
-    bottom: 0; 
-    width:100%; 
-    height: 30%; 
+.fondu_bf {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 30%;
     background-image: linear-gradient(to bottom, transparent, rgb(35, 52, 93));
 
 }
+
 /* SECTION GRID CARROUSSEL */
 
 .hotel_ph_d
