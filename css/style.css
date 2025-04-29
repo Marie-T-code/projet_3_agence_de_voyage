@@ -60,21 +60,39 @@ ul li a{
 }
 .menu-desktop ul li:hover{
   background-color: #00BFFF;
-  padding: 7px;
+  
   color:#ffffff;
   border-radius:10px;
 
  }
-
-
 .menu-dst {
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 
 .menu-telephone {
   display: none;
   flex-direction: column;
-  
 }
 /* menu telephone  */
+.contener{
+  color: #ffffff;
+  margin-top: 10%;
+}
+
+.contener h1{
+ text-align: center;
+ font-size: 90px;
+ box-sizing: ;
+ text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.contener p{
+  text-align: center;
+  font-weight: bold;
+  font-size: 50PX;
+  margin-top: -10PX;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
