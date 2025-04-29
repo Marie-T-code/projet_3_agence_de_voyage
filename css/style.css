@@ -115,7 +115,10 @@ button{
   font-weight: bold;
   border: none;
   background-color: #00BFFF;
+}
 
+button :hover{
+  background-color: #ffffff;
 }
 
 
@@ -125,6 +128,10 @@ input::placeholder {
 }
 
  section.page-2{
-  background-color: #ffffff93;
-  
+  background-color: #ffffff93;  
+}
+
+button:hover{
+  background-color: #ffffff;
+  color:#00BFFF;
 }
