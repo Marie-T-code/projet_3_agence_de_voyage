@@ -1,6 +1,117 @@
-.poppins_test{
-    font-family: 'Poppins';
-    font-weight: 800;
-    font-style: normal;
-    font-size: 10rem; 
+/* 
+Applique le modèle de boîte border-box à tous les éléments, 
+y compris leurs pseudo-éléments ::before et ::after. 
+Cela rend le dimensionnement plus prévisible (padding et border inclus dans la largeur/hauteur).
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
 }
+
+/* 
+Réinitialise les marges et les paddings à 0 pour tous les éléments,
+ce qui élimine les styles par défaut incohérents entre navigateurs.
+Hérite aussi la police des éléments parents pour éviter les incohérences de police.
+*/
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+/* 
+Indique que le site peut s’adapter automatiquement aux thèmes clair et sombre 
+selon les préférences de l’utilisateur.
+*/
+html {
+    color-scheme: dark light;
+}
+
+/* 
+Assure que le corps de la page occupe au minimum toute la hauteur de la fenêtre.
+Utile pour des mises en page pleine hauteur (par exemple, en flex ou grid).
+*/
+body {
+    min-height: 100vh;
+}
+
+/* 
+Assure que les médias s’affichent en bloc (pas inline par défaut) 
+et ne dépassent jamais la largeur de leur conteneur. 
+Cela évite les débordements indésirables.
+*/
+img, picture, svg, video {
+    display: block;
+    max-width: 100%;
+}
+
+/* 
+Utilise la propriété text-wrap: balance pour améliorer l'équilibre visuel 
+des titres sur plusieurs lignes, évitant les sauts de ligne maladroits.
+*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+}
+
+/* 
+Utilise text-wrap: pretty pour éviter les mots isolés en fin de paragraphe ou de ligne 
+("orphans") et améliorer la lisibilité.
+Fixe une largeur maximale de ligne (65 caractères environ), 
+ce qui améliore la lisibilité des textes longs.
+*/
+p,
+li,
+figcaption {
+    text-wrap: pretty;
+    max-width: 65ch;
+}
+
+
+.hero{
+    background-image: url(../img/section_hero/hero_hotel.png);
+    background-size:cover; 
+    background-position: center; 
+    max-width: 100%;
+    min-height: 100dvh;
+    position: relative;
+}
+.titres-hero{
+    display:flex; 
+    flex-flow:column nowrap;
+    gap: 2rem;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+h1{
+    font-family: "Poppins", sans-serif;
+    font-size: 7rem;
+    font-weight:700;
+    text-shadow: 1px 1px 1px white;
+    color: #23345D;
+}
+
+.ss-t-hero{
+    font-family: "Poppins", sans-serif;
+    font-size: 5rem;
+    font-weight:600;
+    text-shadow: 1px 1px 1px #162139;
+    color: white;
+}
+
+/* fondu bleu foncé */
+.fondu_bf{
+    position: absolute; 
+    bottom: 0; 
+    width:100%; 
+    height: 30%; 
+    background-image: linear-gradient(to bottom, transparent, rgb(35, 52, 93));
+
+}
+/* SECTION GRID CARROUSSEL */
+
+.hotel_ph_d
