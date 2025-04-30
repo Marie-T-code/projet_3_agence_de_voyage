@@ -1,5 +1,5 @@
 // Initialisation de la carte centrée sur Megève
-const map = L.map('map').setView([45.8667, 6.6167], 13);
+const map = L.map('map').setView([45.8667, 6.6167], 14);
 
 // Fond de carte OpenStreetMap
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {

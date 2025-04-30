@@ -16,37 +16,76 @@
 
     <section class="hero">
         <header>
-        <nav>
-            <div class="menu">
-                <div class="logo">
-                    <img src="/img/logo/logo 1.png" alt="">
+            <nav>
+                <div class="menu padding-harmo">
+                    <div class="logo">
+                        <img src="/img/logo/logo 1.png" alt="">
+                    </div>
+                    <!--menu  desktop-->
+                    <div class="desktop">
+                        <ul>
+                            <li><a href="#"></a>Accueil</li>
+                            <li><a href="#"></a>Destinations</li>
+                            <li><a href="#"></a>Hôtels</li>
+                            <li><a href="#"></a>Forfaits</li>
+                            <li><a href="#"></a>Contacts<i class="bi bi-telephone-fill"></i></li>
+                        </ul>
+                    </div>
                 </div>
-                <!--menu  desktop-->
-                <div class="desktop">
-
-                    <ul>
-                        <li><a href="#"></a>Accueil</li>
-                        <li><a href="#"></a>Destinations</li>
-                        <li><a href="#"></a>Hôtels</li>
-                        <li><a href="#"></a>Forfaits</li>
-                        <li><a href="#"></a>Contacts<i class="bi bi-telephone-fill"></i></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+            </nav>
         </header>
-        <div class="titres-hero">
-            <h1>M&F Horizons blancs</h1>
-            <p class="ss-t-hero">Ressentez la magie des sommets</p>
-    
+        <div class="padding-harmo">
+            <div class="titres-hero">
+                <h1>M&F Horizons blancs</h1>
+                <p class="ss-t-hero">Ressentez la magie des sommets</p>
+            </div>
         </div>
         <div class="fondu_bf">
         </div>
     </section>
-
-    </section>
-    <section class="hotel_ph_d">
+    <section class="hotel_ph_d padding-harmo"
+        aria-label="Recherche de disponibilités et presentation visuelle de l'hôtel">
+        <div class="recherche_dispos">
+            <div class="container_dispos_boutons">
+                <form class="hotel-form" action="search-bar" action="#" method="get" aria-label="Recherche de séjour">
+                    <label class="dispo-bouton harmo-form">
+                        <span class="sr_only">Nombre de personnes</span>
+                        <select name="personnes" class="icon-ppl champ-style" id="nbr_pers">
+                            <option value="">Nombre de personnes</option>
+                            <option value="1">1 Adulte</option>
+                            <option value="2">2 Adultes</option>
+                            <option value="3">3 Adultes</option>
+                            <option value="4">4 Adultes</option>
+                        </select>
+                    </label>
+                    <label class="harmo-form">
+                        <span class="sr_only">Date d'arrivée</span>
+                        <input class="champ-style" type="date" name="arrivee" placeholder="Date d'arrivée">
+                    </label>
+                    <label class="harmo-form">
+                        <span class="sr_only">Date de départ</span>
+                        <input class="champ-style" type="date" name="depart" placeholder="Date de départ">
+                    </label>
+                    <button class="btn-harmo harmo-form champ-style" type="button" aria-label="Lancer la Recherche">
+                        <img class="icon-loupe" src="../img/images_vectorielles/hotel_recherche_chambres/loupe_svg.svg"
+                            alt="">
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="photos-flex">
+            <div class="chevron-g">
+            </div>
+            <div class="boite-photos">
+                <div class="grid-photos"></div>
+                <div class="grid-photos"></div>
+                <div class="grid-photos"></div>
+            </div>
+            <div class="chevron-d">
+            </div>
+        </div>
+        <div class="illustration-oiseaux">
+        </div>
     </section>
 </body>
-
 </html>
