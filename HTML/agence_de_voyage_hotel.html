@@ -15,36 +15,108 @@
 <body>
 
     <section class="hero">
-        <nav>
-            <div class="menu">
-                <div class="logo">
-                    <img src="/img/logo/logo 1.png" alt="">
+        <header>
+            <nav>
+                <div class="menu padding-harmo">
+                    <div class="logo">
+                        <img src="/img/logo/logo 1.png" alt="">
+                    </div>
+                    <!--menu  desktop-->
+                    <div class="desktop">
+                        <ul>
+                            <li><a href="#"></a>Accueil</li>
+                            <li><a href="#"></a>Destinations</li>
+                            <li><a href="#"></a>Hôtels</li>
+                            <li><a href="#"></a>Forfaits</li>
+                            <li><a href="#"></a>Contacts<i class="bi bi-telephone-fill"></i></li>
+                        </ul>
+                    </div>
                 </div>
-                <!--menu  desktop-->
-                <div class="desktop">
-
-                    <ul>
-                        <li><a href="#"></a>Accueil</li>
-                        <li><a href="#"></a>Destinations</li>
-                        <li><a href="#"></a>Hôtels</li>
-                        <li><a href="#"></a>Forfaits</li>
-                        <li><a href="#"></a>Contacts<i class="bi bi-telephone-fill"></i></li>
-                    </ul>
-                </div>
+            </nav>
+        </header>
+        <div class="padding-harmo">
+            <div class="titres-hero">
+                <h1>M&F Horizons blancs</h1>
+                <p class="ss-t-hero">Ressentez la magie des sommets</p>
             </div>
-        </nav>
-        <div class="titres-hero">
-            <h1>M&F Horizons blancs</h1>
-            <p class="ss-t-hero">Ressentez la magie des sommets</p>
-    
         </div>
         <div class="fondu_bf">
         </div>
     </section>
+    <section class="hotel_ph_d padding-harmo"
+        aria-label="Recherche de disponibilités et presentation visuelle de l'hôtel">
+        <div class="recherche_dispos">
+            <div class="container_dispos_boutons">
+                <form class="hotel-form" action="search-bar" action="#" method="get" aria-label="Recherche de séjour">
+                    <label class="dispo-bouton harmo-form">
+                        <span class="sr_only">Nombre de personnes</span>
+                        <select name="personnes" class="icon-ppl champ-style" id="nbr_pers">
+                            <option value="">Nombre de personnes</option>
+                            <option value="1">1 Adulte</option>
+                            <option value="2">2 Adultes</option>
+                            <option value="3">3 Adultes</option>
+                            <option value="4">4 Adultes</option>
+                        </select>
+                    </label>
+                    <label class="harmo-form">
+                        <span class="sr_only">Date d'arrivée</span>
+                        <input class="champ-style" type="date" name="arrivee" placeholder="Date d'arrivée">
+                    </label>
+                    <label class="harmo-form">
+                        <span class="sr_only">Date de départ</span>
+                        <input class="champ-style" type="date" name="depart" placeholder="Date de départ">
+                    </label>
+                    <button class="btn-harmo harmo-form champ-style" type="button" aria-label="Lancer la Recherche">
+                        <img class="icon-loupe" src="../img/images_vectorielles/hotel_recherche_chambres/loupe_svg.svg"
+                            alt="">
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="chevron">
+            <img src="../img/images_vectorielles/chevron_gauche.svg" alt="">
+        </div>
+        <div class="photos-flex">
 
-    </section>
-    <section class="hotel_ph_d">
+            <div class="boite-photos">
+                <div class="grid-photos">
+                    <div class="img-cell cell-1"><img src="../img/grid_carroussel/cell1.jpeg" alt="Terrasse de bar vide en bois, avec tables dressées et vue dégagée sur des sommets enneigés sous un ciel bleu">
+                    </div>
+                    <div class="img-cell cell-2">
+                        <img src="../img/grid_carroussel/cell2.jpeg" alt="Balcon en bois d'un châlet avec deux fauteuils couverts de plaids, vue sur les montagnes enneigées au crépuscule">
+                    </div>
+                    <div class="img-cell cell-3">
+                        <img src="../img/grid_carroussel/cell3.jpg" alt="Salon chaleureux en bois avec cheminée centrale, dans un chalet de luxe en montagne">
+                    </div>
+                </div>
+                <div class="grid-photos">
+                    <div class="img-cell cell-1">
+                        <img src="../img/grid_carroussel/cell4_berkay-samiloglu-sZFS0KEO3CI-unsplash.jpg" alt="Client dégustant un cocktail au bar cosy du chalet">
+                    </div>
+                    <div class="img-cell cell-2">
+                        <img src="../img/grid_carroussel/cell5.jpg" alt="éléphérique moderne en haute montagne, survolant des pistes privées enneigées">
+                    </div>
+                    <div class="img-cell cell-3">
+                        <img src="../img/grid_carroussel/cell6.jpg" alt="Téléphérique au sommet des pistes enneigées, surplombant la vallée alpine sous un ciel dégagé">
+                    </div>
+                </div>
+                <div class="grid-photos">
+                    <div class="img-cell cell-1">
+                        <img src="../img/grid_carroussel/cell7.jpg" alt="Façade d’un hôtel de montagne avec balcons fleuris, vue sur les sommets et piscine extérieure au premier plan">
+                    </div>
+                    <div class="img-cell cell-2">
+                        <img src="../img/grid_carroussel/cell8.jpg" alt="Moment de détente dans un sauna extérieur avec vue panoramique sur les montagnes enneigées">
+                    </div>
+                    <div class="img-cell cell-3">
+                        <img src="../img/grid_carroussel/cell9.jpg" alt="Trois personnes profitant d’un jacuzzi intérieur sous les toits, entouré de bois et baigné de lumière naturelle">
+                    </div>
+                </div>
+            </div>
+            <div class="chevron">
+            </div>
+        </div>
+        <div class="illustration-oiseaux">
+        </div>
     </section>
 </body>
-
 </html>
