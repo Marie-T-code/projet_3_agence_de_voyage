@@ -90,6 +90,85 @@ header {
 }
 
 /*  menu desktop */
+.menu-desktop ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 30px;
+}
+
+.menu-desktop li {
+  font-weight: bold;
+
+  color: #0490be;
+  transition: 0.1s;
+}
+.menu-desktop i a {
+  margin: 5px;
+  font-size: 14px;
+}
+.menu-desktop ul li:hover {
+  background-color: #00bfff;
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 1px 5px;
+}
+
+.contener {
+  color: #ffffff;
+  margin-top: 5%;
+  align-items: center;
+}
+
+.contener h1 {
+  text-align: center;
+  font-size: 90px;
+  box-sizing: ;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.contener p {
+  text-align: center;
+  font-weight: bold;
+  font-size: 50px;
+  margin-top: -10px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  flex-wrap: wrap;
+}
+
+input {
+  margin-left: 35%;
+  width: 25%;
+  padding: 15px;
+  background-color: transparent;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 10px;
+  position: relative;
+  outline: none;
+}
+button {
+  padding: 15px;
+  color: #ffffff;
+  border-radius: 10px;
+  background: transparent;
+  font-weight: bold;
+  border: none;
+  background-color: #00bfff;
+}
+
+button :hover {
+  background-color: #ffffff;
+}
+
+input::placeholder {
+  color: #ffffff93;
+  text-align: center;
+}
+button:hover {
+  background-color: #ffffff;
+  color: #00bfff;
+  background-size: cover;
+}
 
 /* media screen */
 @media screen and (max-width: 756px) {
