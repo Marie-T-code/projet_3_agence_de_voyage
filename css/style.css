@@ -30,7 +30,7 @@ header {
   display: flex;
   justify-content: space-between;
 }
-/* Fixa o menu mobille */
+/*  menu mobille */
 .menu-telephone {
   background-color: transparent;
   backdrop-filter: blur(20px);
@@ -88,17 +88,10 @@ header {
 .menu-telephone {
   display: none;
 }
-/* Fixa o menu mobille */
-.menu-desktop ul {
-  gap: 20px;
-  flex-wrap: wrap;
-  list-style: none;
-  display: flex;
-  height: 100%;
-  line-height: 70px;
-  color: black;
-}
 
+/*  menu desktop */
+
+/* media screen */
 @media screen and (max-width: 756px) {
   .menu-telephone {
     display: flex;
