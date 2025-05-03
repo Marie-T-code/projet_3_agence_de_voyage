@@ -71,7 +71,7 @@ ul li a{
 }
 
 .menu-telephone {
-  display: none;
+  display:none ;
   flex-direction: column;
 }
 /* menu telephone  */
