@@ -197,17 +197,19 @@ position:relative;
     align-items:center;
     gap:6rem;
 }
-.sr_only{
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    white-space: nowrap;
-    border: 0;
-  }
+/* Masque visuellement le contenu mais le rend accessible aux lecteurs d’écran.
+   Technique standard pour les textes cachés comme les descriptions ou labels. */
+.sr_only {
+    position: absolute;     /* L'élément est retiré du flux normal pour ne pas perturber la mise en page */
+    width: 1px;             /* Taille minuscule pour qu’il prenne un minimum de place */
+    height: 1px;            /* Idem que width, garde l'élément présent mais invisible */
+    padding: 0;             /* Pas d’espace intérieur */
+    margin: -1px;           /* L’élément est "poussé" en dehors de la zone visible */
+    overflow: hidden;       /* Rien de ce qui dépasse ne sera affiché */
+    clip: rect(0 0 0 0);    /* Découpe l’élément pour qu’il soit complètement masqué */
+    white-space: nowrap;    /* Empêche les retours à la ligne, utile pour éviter que le texte soit visible en plusieurs lignes par erreur */
+    border: 0;              /* Supprime toute bordure éventuelle */
+}
 
 .icon-ppl{ /* icone décorative */
     background-image: url(../img/images_vectorielles/hotel_recherche_chambres/personnes_svg.svg );
@@ -246,6 +248,10 @@ form .btn-harmo{
 
 /* FLEX GRID PHOTOS */
 
+.wrapper-ph-gal{
+    position: relative;
+}
+
 .photos-flex{
     display:flex; 
     flex-flow: row nowrap;
@@ -263,7 +269,26 @@ form .btn-harmo{
 
 .chevron {
 position:absolute;
-/* REPRENDRE LE CHEVRON ET LE FIXER */
+top: 50%; /* positionne le point le plus haut de la flèche à 50% de son conteneur */
+transform: translateY(-50%);/* centrage parfait de la flèche  */
+z-index:2;
+cursor:pointer; 
+padding:0.5rem;
+}
+
+.chevron svg{
+    width: 4rem;
+    height: 4rem; 
+}
+
+.chevron:first-child{
+    color: white;
+    left:-2rem;
+}
+
+.chevron:last-child{
+    color: white;
+    right:-2rem;
 }
 
 .grid-photos{

@@ -7,15 +7,12 @@
     <link rel="stylesheet" href="../CSS/fonts.css">
     <!-- <link rel="stylesheet" href="/CSS/fernando.css"> -->
     <link rel="stylesheet" href="../CSS/agence_de_voyage_hotel.css">
-
-
     <title>Document</title>
 </head>
 
 <body>
-
     <section class="hero">
-        <header>
+        <header> <!-- encadrer la nav par un header pour sémantique -->
             <nav>
                 <div class="menu padding-harmo">
                     <div class="logo">
@@ -43,6 +40,7 @@
         <div class="fondu_bf">
         </div>
     </section>
+    <!-- attention le form n'est absolument pas responsive au 04/05/25 -->
     <section class="hotel_ph_d padding-harmo"
         aria-label="Recherche de disponibilités et presentation visuelle de l'hôtel">
         <div class="recherche_dispos">
@@ -73,50 +71,62 @@
                 </form>
             </div>
         </div>
-        <div class="chevron">
-            <img src="../img/images_vectorielles/chevron_gauche.svg" alt="">
-        </div>
-        <div class="photos-flex">
-
-            <div class="boite-photos">
-                <div class="grid-photos">
-                    <div class="img-cell cell-1"><img src="../img/grid_carroussel/cell1.jpeg" alt="Terrasse de bar vide en bois, avec tables dressées et vue dégagée sur des sommets enneigés sous un ciel bleu">
+        <div class="wrapper-ph-gal">
+            <div class="chevron">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-left-icon lucide-chevron-left"><path d="m15 18-6-6 6-6"/></svg>
+            </div>
+            <div class="photos-flex">
+                <div class="boite-photos">
+                    <div class="grid-photos">
+                        <div class="img-cell cell-1"><img src="../img/grid_carroussel/cell1.jpeg"
+                                alt="Terrasse de bar vide en bois, avec tables dressées et vue dégagée sur des sommets enneigés sous un ciel bleu">
+                        </div>
+                        <div class="img-cell cell-2">
+                            <img src="../img/grid_carroussel/cell2.jpeg"
+                                alt="Balcon en bois d'un châlet avec deux fauteuils couverts de plaids, vue sur les montagnes enneigées au crépuscule">
+                        </div>
+                        <div class="img-cell cell-3">
+                            <img src="../img/grid_carroussel/cell3.jpg"
+                                alt="Salon chaleureux en bois avec cheminée centrale, dans un chalet de luxe en montagne">
+                        </div>
                     </div>
-                    <div class="img-cell cell-2">
-                        <img src="../img/grid_carroussel/cell2.jpeg" alt="Balcon en bois d'un châlet avec deux fauteuils couverts de plaids, vue sur les montagnes enneigées au crépuscule">
+                    <div class="grid-photos">
+                        <div class="img-cell cell-1">
+                            <img src="../img/grid_carroussel/cell4_berkay-samiloglu-sZFS0KEO3CI-unsplash.jpg"
+                                alt="Client dégustant un cocktail au bar cosy du chalet">
+                        </div>
+                        <div class="img-cell cell-2">
+                            <img src="../img/grid_carroussel/cell5.jpg"
+                                alt="éléphérique moderne en haute montagne, survolant des pistes privées enneigées">
+                        </div>
+                        <div class="img-cell cell-3">
+                            <img src="../img/grid_carroussel/cell6.jpg"
+                                alt="Téléphérique au sommet des pistes enneigées, surplombant la vallée alpine sous un ciel dégagé">
+                        </div>
                     </div>
-                    <div class="img-cell cell-3">
-                        <img src="../img/grid_carroussel/cell3.jpg" alt="Salon chaleureux en bois avec cheminée centrale, dans un chalet de luxe en montagne">
-                    </div>
-                </div>
-                <div class="grid-photos">
-                    <div class="img-cell cell-1">
-                        <img src="../img/grid_carroussel/cell4_berkay-samiloglu-sZFS0KEO3CI-unsplash.jpg" alt="Client dégustant un cocktail au bar cosy du chalet">
-                    </div>
-                    <div class="img-cell cell-2">
-                        <img src="../img/grid_carroussel/cell5.jpg" alt="éléphérique moderne en haute montagne, survolant des pistes privées enneigées">
-                    </div>
-                    <div class="img-cell cell-3">
-                        <img src="../img/grid_carroussel/cell6.jpg" alt="Téléphérique au sommet des pistes enneigées, surplombant la vallée alpine sous un ciel dégagé">
-                    </div>
-                </div>
-                <div class="grid-photos">
-                    <div class="img-cell cell-1">
-                        <img src="../img/grid_carroussel/cell7.jpg" alt="Façade d’un hôtel de montagne avec balcons fleuris, vue sur les sommets et piscine extérieure au premier plan">
-                    </div>
-                    <div class="img-cell cell-2">
-                        <img src="../img/grid_carroussel/cell8.jpg" alt="Moment de détente dans un sauna extérieur avec vue panoramique sur les montagnes enneigées">
-                    </div>
-                    <div class="img-cell cell-3">
-                        <img src="../img/grid_carroussel/cell9.jpg" alt="Trois personnes profitant d’un jacuzzi intérieur sous les toits, entouré de bois et baigné de lumière naturelle">
+                    <div class="grid-photos">
+                        <div class="img-cell cell-1">
+                            <img src="../img/grid_carroussel/cell7.jpg"
+                                alt="Façade d’un hôtel de montagne avec balcons fleuris, vue sur les sommets et piscine extérieure au premier plan">
+                        </div>
+                        <div class="img-cell cell-2">
+                            <img src="../img/grid_carroussel/cell8.jpg"
+                                alt="Moment de détente dans un sauna extérieur avec vue panoramique sur les montagnes enneigées">
+                        </div>
+                        <div class="img-cell cell-3">
+                            <img src="../img/grid_carroussel/cell9.jpg"
+                                alt="Trois personnes profitant d’un jacuzzi intérieur sous les toits, entouré de bois et baigné de lumière naturelle">
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="chevron">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right-icon lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg>
             </div>
         </div>
         <div class="illustration-oiseaux">
         </div>
     </section>
 </body>
+
 </html>

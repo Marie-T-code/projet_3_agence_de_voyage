@@ -1,0 +1,19 @@
+.wrapper{
+position: relative; 
+}
+
+.wrapper svg{
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+}
+
+.montagne-fond{
+    background-color: aliceblue;
+    color:aliceblue;
+}
+
+.montagne-milieu{
+    background-color: aqua;
+}
