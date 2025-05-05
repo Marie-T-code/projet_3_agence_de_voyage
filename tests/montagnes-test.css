@@ -9,11 +9,9 @@ position: relative;
     width: 100%; 
 }
 
-.montagne-fond{
-    background-color: aliceblue;
-    color:aliceblue;
-}
-
-.montagne-milieu{
-    background-color: aqua;
+.boite{
+    width:15rem; 
+    height: 15rem;
+    border: 2px solid black;  
+    z-index: 10;  
 }
