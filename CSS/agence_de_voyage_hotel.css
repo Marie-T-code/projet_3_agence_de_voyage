@@ -313,3 +313,40 @@ grid-row-end:3;
     grid-row-start: 2;
     grid-row-end:3;
 }
+
+.illustration-oiseaux svg{
+    fill:white; 
+    width: 100%; 
+    height: auto; 
+}
+
+/* UNE DESTINATION DE REVE */
+
+.presentation{
+    background-image:  linear-gradient(to bottom, rgb(35, 52, 93), rgb(182, 199, 237)  );
+}
+
+.wrapper-montagnes{
+    position: relative; 
+    width: 100vw; 
+    height: 100vh; 
+    }
+
+.wrapper-montagnes svg{
+        position: absolute; 
+        top: 0; 
+        left: 0; 
+        object-fit: cover; 
+    }
+.montagne-1{
+        fill:rgb(35, 52, 93) ;}
+
+.wrapper-montagnes .montagne-2{
+       fill:rgb(57, 85, 151);
+
+       }
+
+.montagne-3{
+           fill: rgb(91, 131, 225) ;
+       }
+

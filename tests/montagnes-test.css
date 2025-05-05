@@ -1,17 +1,26 @@
-.wrapper{
-position: relative; 
+.presentation{
+    background-image:  linear-gradient(to bottom, rgb(35, 52, 93), rgb(182, 199, 237)  );
 }
 
-.wrapper svg{
-    position: absolute; 
-    top: 0; 
-    left: 0; 
-    width: 100%; 
-}
+.wrapper-montagnes{
+    position: relative; 
+    width: 100vw; 
+    height: 100vh; 
+    }
 
-.boite{
-    width:15rem; 
-    height: 15rem;
-    border: 2px solid black;  
-    z-index: 10;  
-}
+.wrapper-montagnes svg{
+        position: absolute; 
+        top: 0; 
+        left: 0; 
+        object-fit: cover; 
+    }
+.montagne-1{
+        fill:rgb(35, 52, 93);}
+
+.montagne-2{
+       fill:rgb(57, 85, 151);
+       }
+
+.montagne-3{
+           fill: rgb(91, 131, 225);
+       }
