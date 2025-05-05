@@ -397,9 +397,11 @@ h2 {
     text-align: center;
     border-radius: 0.625rem;
 }
-.padding-pres{
+
+.padding-pres {
     padding-bottom: 13rem;
 }
+
 /* section description flex (photos => responsive scrset GIMP a faire) */
 
 .presentation-flex {
@@ -411,8 +413,8 @@ h2 {
 .desc-texte {
     background-color: rgb(198, 207, 228);
     box-shadow: 6px 6px 15px white;
-    align-self: center; 
-    padding:3rem; 
+    align-self: center;
+    padding: 3rem;
 }
 
 h3 {
@@ -421,48 +423,94 @@ h3 {
     font-weight: 600;
 }
 
-article{
-    display: flex; 
-    gap: 7rem; 
-    margin: 15rem 5rem; 
+article {
+    display: flex;
+    gap: 7rem;
+    margin: 15rem 5rem;
 }
 
 .desc-photo {
- display: flex; 
- flex-flow: column nowrap; 
- gap: 1rem; 
- max-height: 35rem; 
- overflow-y: auto; 
- scroll-behavior: smooth;   
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem;
+    max-height: 35rem;
+    overflow-y: auto;
+    scroll-behavior: smooth;
 }
 
 .desc-photo img {
     max-width: 30rem;
 }
 
-.svg-deco-pres{
+.svg-deco-pres {
     position: absolute;
-    width: 14rem; 
+    width: 14rem;
     color: white;
 }
 
-.top-deco-1{
+.top-deco-1 {
 
     left: 25rem;
 }
 
-.top-deco-2{
- top: 55rem;
- left:65rem;
+.top-deco-2 {
+    top: 55rem;
+    left: 65rem;
 }
-.top-deco-3{
+
+.top-deco-3 {
     top: 97rem;
     left: 45rem;
 }
 
-.top-deco-4{
+.top-deco-4 {
     top: 150rem;
     left: 25rem;
 }
 
 /* INFOS PRATIQUES */
+
+.infos-prat {
+    position: relative;
+    padding-bottom: 15rem;
+    background-color: rgb(151, 172, 222);
+    background-image: linear-gradient(to bottom, rgb(151, 172, 222), rgb(240, 239, 239))
+}
+
+.infos-map {
+    display: flex;
+    flex-flow: row no wrap;
+    gap: 10rem;
+    position: relative;
+    z-index: 2;
+    padding-top: 10rem;
+}
+
+.infos-txt {
+    flex-basis: 0.8;
+}
+
+.infos-txt>ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.map {
+    width: 60rem;
+    background-color: rgb(35, 52, 93);
+}
+
+.montagne-4 {
+    fill: rgb(255, 255, 255);
+    position: absolute;
+    top: 8rem;
+    z-index: 1;
+}
+
+.oiseaux-2 {
+    position: absolute;
+    width: 35rem;
+    left: 25rem;
+    z-index: 2;
+    filter:drop-shadow(0 0.1rem 0.3rem rgba(35, 52, 93, 0.405))
+}
