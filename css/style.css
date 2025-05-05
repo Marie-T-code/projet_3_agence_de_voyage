@@ -95,6 +95,7 @@ header {
   justify-content: center;
   list-style: none;
   gap: 30px;
+  cursor: pointer;
 }
 
 .menu-desktop li {
@@ -121,6 +122,7 @@ header {
 }
 
 .contener h1 {
+  margin-top: 250px;
   text-align: center;
   font-size: 90px;
   box-sizing: ;
@@ -154,6 +156,7 @@ button {
   font-weight: bold;
   border: none;
   background-color: #00bfff;
+  cursor: pointer;
 }
 
 button :hover {
@@ -170,8 +173,22 @@ button:hover {
   background-size: cover;
 }
 
+.page-2 {
+  background-color: #ffffff;
+  margin-top: 500px;
+}
+.page-2-text {
+  text-align: center;
+  font-size: x-large;
+}
+
+.page-2-text h1 {
+  font-size: 50px;
+  color: #0490be;
+}
+
 /* media screen */
-@media screen and (max-width: 756px) {
+@media screen and (max-width: 835px) {
   .menu-telephone {
     display: flex;
   }
