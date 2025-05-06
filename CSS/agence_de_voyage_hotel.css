@@ -17,7 +17,7 @@ Hérite aussi la police des éléments parents pour éviter les incohérences de
 * {
     margin: 0;
     padding: 0;
-    font:inherit;
+    font: inherit;
     font-family: "Poppins", sans-serif;
 }
 
@@ -27,6 +27,7 @@ selon les préférences de l’utilisateur.
 */
 html {
     color-scheme: dark light;
+    scroll-behavior: smooth;
 }
 
 /* 
@@ -35,6 +36,7 @@ Utile pour des mises en page pleine hauteur (par exemple, en flex ou grid).
 */
 body {
     min-height: 100vh;
+    background-color: rgb(35, 52, 93);
 }
 
 /* 
@@ -75,13 +77,22 @@ figcaption {
     text-wrap: pretty;
     max-width: 65ch;
 }
-/* section{
-    padding: 20px 8%;
-} */
- .padding-harmo{
-    padding: 0.6rem 8vw;
- }
 
+
+.padding-harmo {
+    padding: 0.6rem 8vw;
+}
+
+.padding-top{ 
+    padding-top: 1rem;
+}
+
+
+a, a:link,  a:visited, a:hover, a:focus, a:active {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
 
 .hero {
     background-image: url(../img/section_hero/hero_hotel.png);
@@ -89,11 +100,12 @@ figcaption {
     background-position: center;
     max-width: 100%;
     min-height: 100svh;
+    position: relative;
 }
 
 .logo img {
     max-width: 5em;
-    margin-top: 10px;
+    margin-top: 0.6rem;
 }
 
 .menu {
@@ -101,18 +113,20 @@ figcaption {
     justify-content: space-around;
     align-items: center;
 }
-nav{
-    background-image: linear-gradient(to bottom,#c5c5c5, #c5c5c58f, transparent);
-    
+
+.top-nav {
+    background-image: linear-gradient(to bottom, #c5c5c5, #c5c5c58f, transparent);
+
 }
+
 .descktop,
 ul {
     color: white;
     text-decoration: none;
     list-style-type: none;
     display: flex;
-    gap: 30px;
-    padding: 10px 25px;
+    gap: 1.875rem;
+    padding: 0.6rem 1.5rem;
     font-weight: bold;
     color: #03759b;
     transition: 0.5s;
@@ -120,14 +134,14 @@ ul {
 
 .descktop,
 ul li {
-    padding: 10px;
+    padding: 0.6rem;
 }
 
 .descktop,
 ul li:hover {
     background-color: #00bfff;
     color: #ffffff;
-    border-radius: 10px;
+    border-radius: 0.6rem;
 }
 
 /* SECTION HERO */
@@ -146,8 +160,8 @@ h1 {
     text-transform: uppercase;
     font-weight: 900;
     font-size: 5.625rem;
-    box-sizing: ;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    box-sizing: border-box;
+    text-shadow: 2px 2px 0.5rem rgba(0, 0, 0, 0.7);
     margin-top: 15%;
     align-items: center;
 }
@@ -157,159 +171,479 @@ h1 {
     color: white;
     text-align: center;
     font-weight: bold;
-    font-size: 50px;
-    margin-top: -10px;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    font-size: 3.125rem;
+    margin-top: -0.6rem;
+    text-shadow: 2px 2px 0.5rem rgba(0, 0, 0, 0.7);
 }
 
 /* fondu bleu foncé */
 .fondu_bf {
     width: 100%;
-    height: 10rem;
+    height: 15rem;
+    position: absolute; 
+    bottom:0; 
     background-image: linear-gradient(to bottom, transparent, rgb(35, 52, 93));
 }
 
 /* SECTION GRID CARROUSSEL */
 
 
-.hotel_ph_d{ /* hotel photo display */
-background-color: rgb(35, 52, 93);
-margin-top: -10px;
-position:relative;
+.hotel_ph_d {
+    /* hotel photo display */
+    background-color: rgb(35, 52, 93);
+
+    position: relative;
 }
 
 /* BARRE DE RECHERCHE */
-.container_dispos_boutons{
-    display:flex; 
-    flex-flow:row nowrap;
-    justify-content:center;
-    padding-top:1.5rem;
-    padding-bottom:1.5rem;
+.container_dispos_boutons {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
     border-radius: 2px;
     background-color: #4360A9;
-    margin-top:1.5rem;
-    margin-bottom:1.5rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
 }
 
-.hotel-form{
-    display:flex;
-    flex-flow:row nowrap;
-    align-items:center;
-    gap:6rem;
+.hotel-form {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 6rem;
 }
+
 /* Masque visuellement le contenu mais le rend accessible aux lecteurs d’écran.
    Technique standard pour les textes cachés comme les descriptions ou labels. */
 .sr_only {
-    position: absolute;     /* L'élément est retiré du flux normal pour ne pas perturber la mise en page */
-    width: 1px;             /* Taille minuscule pour qu’il prenne un minimum de place */
-    height: 1px;            /* Idem que width, garde l'élément présent mais invisible */
-    padding: 0;             /* Pas d’espace intérieur */
-    margin: -1px;           /* L’élément est "poussé" en dehors de la zone visible */
-    overflow: hidden;       /* Rien de ce qui dépasse ne sera affiché */
-    clip: rect(0 0 0 0);    /* Découpe l’élément pour qu’il soit complètement masqué */
-    white-space: nowrap;    /* Empêche les retours à la ligne, utile pour éviter que le texte soit visible en plusieurs lignes par erreur */
-    border: 0;              /* Supprime toute bordure éventuelle */
+    position: absolute;
+    /* L'élément est retiré du flux normal pour ne pas perturber la mise en page */
+    width: 1px;
+    /* Taille minuscule pour qu’il prenne un minimum de place */
+    height: 1px;
+    /* Idem que width, garde l'élément présent mais invisible */
+    padding: 0;
+    /* Pas d’espace intérieur */
+    margin: -1px;
+    /* L’élément est "poussé" en dehors de la zone visible */
+    overflow: hidden;
+    /* Rien de ce qui dépasse ne sera affiché */
+    clip: rect(0 0 0 0);
+    /* Découpe l’élément pour qu’il soit complètement masqué */
+    white-space: nowrap;
+    /* Empêche les retours à la ligne, utile pour éviter que le texte soit visible en plusieurs lignes par erreur */
+    border: 0;
+    /* Supprime toute bordure éventuelle */
 }
 
-.icon-ppl{ /* icone décorative */
+.icon-ppl {
+    /* icone décorative */
     background-image: url(../img/images_vectorielles/hotel_recherche_chambres/personnes_svg.svg );
     background-size: 1.3rem auto;
     background-repeat: no-repeat;
-background-position: right;
+    background-position: right;
     padding-right: 0.3rem;
 }
 
-.icon-loupe{
-    box-sizing:border-box;
+.icon-loupe {
+    box-sizing: border-box;
     max-height: 1.2rem;
 }
 
-form .btn-harmo{
+form .btn-harmo {
 
-    height:1.5rem;
-} 
-
-.harmo-form{
-    display:flex; 
-    align-items: center; 
-    justify-content: center; 
-    width:7.5rem; 
-    height:3rem;
-    padding: 0 0.5rem;
-    box-sizing:border-box;
+    height: 1.5rem;
 }
 
-.champ-style{
+.harmo-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 7.5rem;
+    height: 3rem;
+    padding: 0 0.5rem;
+    box-sizing: border-box;
+}
+
+.champ-style {
     background-color: #d8d8d8;
-    border:none;
+    border: none;
     border-radius: 3px;
-    padding:0.6rem;
+    padding: 0.6rem;
 }
 
 /* FLEX GRID PHOTOS */
 
-.wrapper-ph-gal{
+.wrapper-ph-gal {
     position: relative;
+    padding-top: 2rem;
 }
-
-.photos-flex{
-    display:flex; 
+.wrapper-ph-gal img{
+}
+.photos-flex {
+    display: flex;
     flex-flow: row nowrap;
-    padding-left:3rem;
-    padding-right:3rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
 }
 
 
-.boite-photos{
-    display:flex; 
+.boite-photos {
+    display: flex;
     flex-flow: row nowrap;
     gap: 4rem;
-    overflow-x:scroll;
+    overflow-x: scroll;
 }
 
 .chevron {
-position:absolute;
-top: 50%; /* positionne le point le plus haut de la flèche à 50% de son conteneur */
-transform: translateY(-50%);/* centrage parfait de la flèche  */
-z-index:2;
-cursor:pointer; 
-padding:0.5rem;
+    position: absolute;
+    top: 50%;
+    /* positionne le point le plus haut de la flèche à 50% de son conteneur */
+    transform: translateY(-50%);
+    /* centrage parfait de la flèche  */
+    z-index: 2;
+    cursor: pointer;
+    padding: 0.5rem;
 }
 
-.chevron svg{
+.chevron svg {
     width: 4rem;
-    height: 4rem; 
+    height: 4rem;
 }
 
-.chevron:first-child{
+.chevron:first-child {
     color: white;
-    left:-2rem;
+    left: -2rem;
 }
 
-.chevron:last-child{
+.chevron:last-child {
     color: white;
-    right:-2rem;
+    right: -2rem;
 }
 
-.grid-photos{
-    display:grid;
-    grid-template-columns:repeat(2, minmax(300px, 1fr));
+.grid-photos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(18.75rem, 1fr));
     gap: 1.5rem;
 }
-.img-cell img{
-    width:100%; 
-    height:100%; 
-    object-fit:cover; 
-    border-radius: 15px;
+
+.img-cell img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
 }
 
-.cell-1{
-grid-row-start: 1;
-grid-row-end:3;
+.cell-1 {
+    grid-row-start: 1;
+    grid-row-end: 3;
 }
 
-.cell-3{
-    grid-column-start:2;
+.cell-3 {
+    grid-column-start: 2;
     grid-row-start: 2;
-    grid-row-end:3;
+    grid-row-end: 3;
 }
+.boite-photos:hover .img-cell {
+    filter: brightness(0.5);
+}
+
+.boite-photos:has(.img-cell:hover) .img-cell:hover {
+    filter: brightness(1);
+}
+
+.illustration-oiseaux svg {
+    fill: white;
+    width: 100%;
+    height: auto;
+}
+
+.wrapper-mont-resp{
+    height: 3rem; 
+}
+
+/* UNE DESTINATION DE REVE */
+
+.presentation {
+    background-image: linear-gradient(to bottom, rgb(35, 52, 93) 0%, rgb(207, 208, 212) 19%, rgb(182, 199, 237) 100%);
+}
+
+.wrapper-montagnes {
+    position: relative;
+    width: 100vw;
+    height: 46.25rem;
+}
+
+.wrapper-montagnes svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.montagne-1 {
+    fill: rgb(35, 52, 93);
+}
+
+.wrapper-montagnes .montagne-2 {
+    fill: rgb(57, 85, 151);
+}
+
+.montagne-3 {
+    fill: rgb(91, 131, 225);
+}
+
+/* RESPONSIVE A PREVOIR */
+
+.wrapper-montagnes .edelweiss {
+    color: white;
+    fill: white;
+    width: clamp(8rem, 11vw, 12rem);
+    top: clamp(8rem, 10vh, 12rem);
+    left: clamp(40rem, 65vw, 65rem);
+}
+
+/* RESPONSIVE A PREVOIR (clamp mini fucked up ptet virer les svg) */
+.wrapper-montagnes .chevre {
+    color: white;
+    fill: white;
+    width: clamp(5rem, 10vw, 12rem);
+    top: clamp(0.1rem, 35rem, 50rem);
+    left: clamp(3rem, 5vw, 8rem);
+}
+
+h2 {
+    font-size: 1.25rem;
+    font-weight: 800;
+    background-color: white;
+    margin: 0 16rem;
+    padding: 1.5rem;
+    text-align: center;
+    border-radius: 0.625rem;
+}
+
+.padding-pres {
+    padding-bottom: 13rem;
+}
+
+.ilustration-presentation {
+    position: relative;
+    height: auto; 
+    padding:0; 
+    margin:0;
+    overflow: visible;
+    display:block; 
+    line-height:0; 
+  }
+
+/* section description flex (photos => responsive scrset GIMP a faire) */
+
+.presentation-flex {
+    margin-top: 13rem;
+    background-image: linear-gradient(to bottom, rgb(91, 131, 225), rgb(151, 172, 222));
+    position: relative;
+}
+
+.desc-texte {
+    background-color: rgb(198, 207, 228);
+    box-shadow: 6px 6px 0.9rem white;
+    align-self: center;
+    padding: 3rem;
+}
+
+h3 {
+    font-size: 1.125rem;
+    padding: 1rem;
+    font-weight: 600;
+}
+
+article {
+    display: flex;
+    gap: 7rem;
+    margin: 15rem 5rem;
+}
+
+.desc-photo {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem;
+    max-height: 35rem;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+.desc-photo img {
+    max-width: 30rem;
+}
+
+.svg-deco-pres {
+    position: absolute;
+    width: 14rem;
+    color: white;
+}
+
+.top-deco-1 {
+
+    left: 25rem;
+}
+
+.top-deco-2 {
+    top: 55rem;
+    left: 65rem;
+}
+
+.top-deco-3 {
+    top: 97rem;
+    left: 45rem;
+}
+
+.top-deco-4 {
+    top: 150rem;
+    left: 25rem;
+}
+
+/* INFOS PRATIQUES */
+
+.infos-prat {
+    position: relative;
+    min-height: 40rem;
+    padding-bottom: 15rem;
+    background-color: rgb(151, 172, 222);
+    background-image: linear-gradient(to bottom, rgb(151, 172, 222) 0%, rgb(240, 239, 239) 70%, rgb(255, 255, 255)100%);
+}
+
+
+
+.infos-map {
+    display: flex;
+    flex-flow: row no wrap;
+    gap: 10rem;
+    position: relative;
+    z-index: 2;
+    padding-top: 10rem;
+}
+
+.infos-txt {
+    flex-basis: 0.8;
+}
+
+.infos-txt>ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.map {
+    width: 60rem;
+    background-color: rgb(35, 52, 93);
+}
+.illustrations{
+    position: absolute; 
+}
+
+.montagne-4 {
+    fill: rgb(255, 255, 255);
+    position: absolute;
+    top: 8rem;
+    z-index: 1;
+}
+
+.oiseaux-2 {
+    position: absolute;
+    width: 35rem;
+    left: 25rem;
+    z-index: 2;
+    filter:drop-shadow(0 0.1rem 0.3rem rgba(35, 52, 93, 0.405))
+}
+
+/* footer */
+
+footer{
+    display: flex; 
+    flex-flow:column nowrap;
+    background-color: white;
+    color:rgb(35, 52, 93)
+}
+
+.footer-flex{
+    display: flex; 
+    justify-content:space-between;
+    padding: 1rem;
+}
+
+.branding-flex{
+    display: flex; 
+    justify-content:space-between; 
+    align-items: center; 
+    border-bottom: solid 1px #4360A9;
+    padding: 1rem; 
+}
+
+.logos-footer{
+    max-width: 5rem;
+    margin-top: 0.6rem;
+}
+.textes{
+    line-height: 1.25rem ;
+}
+.brands{
+    font-size: 1rem; 
+    font-weight: 700; 
+}
+
+.slogan{
+    font-size: 0.875rem; 
+    font-weight: 300;
+}
+
+.mentions-legales{
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    padding: 1rem;
+}
+
+.footer-subtitles{
+    text-align: center; 
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+footer ul{
+    display: flex; 
+    flex-flow: column nowrap; 
+    justify-content: center; 
+    align-content: center; 
+    gap:0.125rem;
+}
+
+footer li{
+ transition: none;
+ padding:0; 
+ font-weight: 200; 
+ color: black; 
+}
+
+footer li:hover{
+    background-color: transparent; 
+    color: inherit; 
+    border-radius: 0; 
+    cursor:pointer; 
+}
+
+/* BOUTON STICKY */
+
+.logo-sticky{
+    position: fixed; 
+    bottom: clamp(2rem, 5vh, 4rem);
+    right: 2rem;
+    max-width: 6rem;
+    filter: drop-shadow(0.3rem 0.3rem 0.3rem rgb(35, 52, 93));
+    z-index:999;
+    background: none;
+    padding: 0; /* crucial */
+    border: none;
+}
+

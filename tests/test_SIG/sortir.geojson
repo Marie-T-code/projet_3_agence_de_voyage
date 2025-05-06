@@ -1,0 +1,18 @@
+{
+"type": "FeatureCollection",
+"name": "sortir",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "id": 1, "nom": "HB Gastronomie", "descriptio": "Cuisine d’auteur au sommet. Produits d’exception, techniques millimétrées, service feutré. HB Gastronomie, l’expérience alpine par excellence", "type": "restaurant", "hotel": true }, "geometry": { "type": "Point", "coordinates": [ 6.642425819225073, 45.843662165184298 ] } },
+{ "type": "Feature", "properties": { "id": 2, "nom": "L'épicéa", "descriptio": "Table alpine raffinée, cuisine saisonnière à base de produits locaux, cave voûtée de 250 références. Vue sur la vallée", "type": "restaurant", "hotel": false }, "geometry": { "type": "Point", "coordinates": [ 6.629595884502967, 45.842373851758786 ] } },
+{ "type": "Feature", "properties": { "id": 3, "nom": "le 1920", "descriptio": "Brasserie chic hommage à l'âge d’or de Megève. Service en gants blancs, truite fumée maison et sabayon au génépi", "type": "restaurant", "hotel": false }, "geometry": { "type": "Point", "coordinates": [ 6.634235843858053, 45.860617870941468 ] } },
+{ "type": "Feature", "properties": { "id": 4, "nom": "La Cave des Cimes", "descriptio": "Lounge discret en sous-sol, DJ sets acoustiques, ambiance feutrée pour fins de soirées soyeuses", "type": "club", "hotel": false }, "geometry": { "type": "Point", "coordinates": [ 6.615763440361312, 45.85234735071662 ] } },
+{ "type": "Feature", "properties": { "id": 5, "nom": "Le Châlet Noir", "descriptio": "Club privé au décor bois & acier, uniquement sur invitation. Cocktails signatures et cheminée suspendue", "type": "club", "hotel": false }, "geometry": { "type": "Point", "coordinates": [ 6.620161631670061, 45.863221298658303 ] } },
+{ "type": "Feature", "properties": { "id": 6, "nom": "L'Orée Blanche", "descriptio": "Cuisine végétale inspirée des forêts de montagne. Dîner sous verrière chauffée, vue sur les flocons", "type": "restaurant", "hotel": false }, "geometry": { "type": "Point", "coordinates": [ 6.606967057743817, 45.847292538368045 ] } },
+{ "type": "Feature", "properties": { "id": 7, "nom": "Le Grenier", "descriptio": "Ancienne ferme transformée en table confidentielle. Service au coin du feu, plats mijotés à l’ancienne", "type": "restaurant", "hotel": false }, "geometry": { "type": "Point", "coordinates": [ 6.632476567334554, 45.848517989605945 ] } },
+{ "type": "Feature", "properties": { "id": 8, "nom": "Altitude 1700", "descriptio": "Soirées au sommet, ambiance électro-organique, accès par navette privée. Dress code : boots en cuir ciré", "type": "club", "hotel": false }, "geometry": { "type": "Point", "coordinates": [ 6.639733582993987, 45.87792072011684 ] } },
+{ "type": "Feature", "properties": { "id": 9, "nom": "Les Trois Arches", "descriptio": "Cuisine italienne revisitée en altitude. Burrata fumée, pâtes fraîches maison, limoncello infusé au sapin", "type": "restaurant", "hotel": false }, "geometry": { "type": "Point", "coordinates": [ 6.622360727324434, 45.871643317812755 ] } },
+{ "type": "Feature", "properties": { "id": 10, "nom": "Le Quartz", "descriptio": "Bar à champagne discret. Live piano en début de soirée, DJ set jazzy dès 23h. Mur en pierres précieuses (ou presque)", "type": "club", "hotel": false }, "geometry": { "type": "Point", "coordinates": [ 6.634895572554365, 45.851428328094734 ] } },
+{ "type": "Feature", "properties": { "id": 11, "nom": "Le Refuge 7", "descriptio": "Club à flanc de montagne, accès par ascenseur incliné. Mix chill & funk, clients en après-ski Hermès", "type": "club", "hotel": false }, "geometry": { "type": "Point", "coordinates": [ 6.603448504696817, 45.85296002402783 ] } }
+]
+}
