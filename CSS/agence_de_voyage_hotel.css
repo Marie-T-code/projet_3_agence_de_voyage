@@ -472,6 +472,7 @@ article {
 
 .infos-prat {
     position: relative;
+    min-height: 40rem;
     padding-bottom: 15rem;
     background-color: rgb(151, 172, 222);
     background-image: linear-gradient(to bottom, rgb(151, 172, 222), rgb(240, 239, 239))
@@ -514,3 +515,10 @@ article {
     z-index: 2;
     filter:drop-shadow(0 0.1rem 0.3rem rgba(35, 52, 93, 0.405))
 }
+
+/* footer */
+
+footer{
+    display: flex; 
+    flex-flow:column nowrap;
+    background-color: white;}
