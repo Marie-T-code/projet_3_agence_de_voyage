@@ -27,6 +27,7 @@ selon les préférences de l’utilisateur.
 */
 html {
     color-scheme: dark light;
+    scroll-behavior: smooth;
 }
 
 /* 
@@ -35,6 +36,7 @@ Utile pour des mises en page pleine hauteur (par exemple, en flex ou grid).
 */
 body {
     min-height: 100vh;
+    background-color: rgb(35, 52, 93);
 }
 
 /* 
@@ -76,13 +78,21 @@ figcaption {
     max-width: 65ch;
 }
 
-/* section{
-    padding: 20px 8%;
-} */
+
 .padding-harmo {
     padding: 0.6rem 8vw;
 }
 
+.padding-top{ 
+    padding-top: 1rem;
+}
+
+
+a, a:link,  a:visited, a:hover, a:focus, a:active {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
 
 .hero {
     background-image: url(../img/section_hero/hero_hotel.png);
@@ -103,7 +113,7 @@ figcaption {
     align-items: center;
 }
 
-nav {
+.top-nav {
     background-image: linear-gradient(to bottom, #c5c5c5, #c5c5c58f, transparent);
 
 }
@@ -191,8 +201,8 @@ h1 {
     padding-bottom: 1.5rem;
     border-radius: 2px;
     background-color: #4360A9;
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
 }
 
 .hotel-form {
@@ -265,8 +275,10 @@ form .btn-harmo {
 
 .wrapper-ph-gal {
     position: relative;
+    padding-top: 2rem;
 }
-
+.wrapper-ph-gal img{
+}
 .photos-flex {
     display: flex;
     flex-flow: row nowrap;
@@ -330,6 +342,13 @@ form .btn-harmo {
     grid-column-start: 2;
     grid-row-start: 2;
     grid-row-end: 3;
+}
+.boite-photos:hover .img-cell {
+    filter: brightness(0.5);
+}
+
+.boite-photos:has(.img-cell:hover) .img-cell:hover {
+    filter: brightness(1.2);
 }
 
 .illustration-oiseaux svg {
@@ -475,8 +494,10 @@ article {
     min-height: 40rem;
     padding-bottom: 15rem;
     background-color: rgb(151, 172, 222);
-    background-image: linear-gradient(to bottom, rgb(151, 172, 222), rgb(240, 239, 239))
+    background-image: linear-gradient(to bottom, rgb(151, 172, 222) 0%, rgb(240, 239, 239) 70%, rgb(255, 255, 255)100%);
 }
+
+
 
 .infos-map {
     display: flex;
@@ -500,6 +521,9 @@ article {
     width: 60rem;
     background-color: rgb(35, 52, 93);
 }
+.illustrations{
+    position: absolute; 
+}
 
 .montagne-4 {
     fill: rgb(255, 255, 255);
@@ -521,4 +545,89 @@ article {
 footer{
     display: flex; 
     flex-flow:column nowrap;
-    background-color: white;}
+    background-color: white;
+    color:rgb(35, 52, 93)
+}
+
+.footer-flex{
+    display: flex; 
+    justify-content:space-between;
+    padding: 1rem;
+}
+
+.branding-flex{
+    display: flex; 
+    justify-content:space-between; 
+    align-items: center; 
+    border-bottom: solid 1px #4360A9;
+    padding: 1rem; 
+}
+
+.logos-footer{
+    max-width: 5rem;
+    margin-top: 10px;
+}
+.textes{
+    line-height: 1.25rem ;
+    pading-top:
+}
+.brands{
+    font-size: 1rem; 
+    font-weight: 700; 
+}
+
+.slogan{
+    font-size: 0.875rem; 
+    font-weight: 300;
+}
+
+.mentions-legales{
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    padding: 1rem;
+}
+
+.footer-subtitles{
+    text-align: center; 
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+footer ul{
+    display: flex; 
+    flex-flow: column nowrap; 
+    justify-content: center; 
+    align-content: center; 
+    gap:0.125rem;
+}
+
+footer li{
+ transition: none;
+ padding:0; 
+ font-weight: 200; 
+ color: black; 
+}
+
+footer li:hover{
+    background-color: transparent; 
+    color: inherit; 
+    border-radius: 0; 
+    cursor:pointer; 
+}
+
+/* BOUTON STICKY */
+
+.logo-sticky{
+    position: fixed; 
+    top: 40rem;
+    right: 2rem;
+    max-width: 6rem;
+    filter: drop-shadow(0.3rem 0.3rem 0.3rem rgb(35, 52, 93));
+    z-index:999;
+    background: none;
+    padding: 0; /* crucial */
+    border: none;
+}
+
