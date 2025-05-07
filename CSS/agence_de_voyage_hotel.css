@@ -102,7 +102,9 @@ a, a:link,  a:visited, a:hover, a:focus, a:active {
     min-height: 100svh;
     position: relative;
 }
-
+.hero a, a:link,  a:visited, a:hover, a:focus, a:active {
+    color: #03759b;
+}
 .logo img {
     max-width: 5em;
     margin-top: 0.6rem;
@@ -118,6 +120,108 @@ a, a:link,  a:visited, a:hover, a:focus, a:active {
     background-image: linear-gradient(to bottom, #c5c5c5, #c5c5c58f, transparent);
 
 }
+/* FERNANDO MENU TELEPHONE START */
+
+
+.menu-telephone {
+    background-color: transparent;
+    backdrop-filter: blur(20px);
+    width: 80px;
+    height: 100vh;
+    /* padding: 20px; */
+    position: fixed;
+    padding: 20px 0 0px 0.5%;
+    box-shadow: 3px 0 0 #00bfff;
+    margin-top: -10px;
+    top: 0;
+    left: -30px;
+    overflow: hidden;
+    transition: 0.2s;
+  }
+  
+  .menu-telephone:hover {
+    width: 300px;
+  }
+  
+  .item-menu a {
+    color: rgb(205, 205, 205);
+    text-decoration: none;
+    display: flex;
+    margin-bottom: 5px;
+    gap: 20px;
+   font-size:1.5rem;
+    /* line-height: 40px; */
+  }
+  .menu-telephone li {
+    list-style: none;
+    transform: 0.2s;
+    margin-left:0.4rem;
+  }
+  .menu-telephone li:hover {
+    width: 135%;
+    background-color: #00bfff;
+  }
+  
+  .menu-dst {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    height: 20%;
+    line-height: 40px;
+  
+    margin-left: 120px;
+  }
+  
+  .incon i {
+    margin-left: 10px;
+  }
+  .item-menu a:hover {
+    color: rgb(255, 255, 255);
+  }
+
+  .item-menu a .txt-link:hover {
+    color: rgb(255, 255, 255);
+  }
+  @media screen and (max-width: 835px) {
+    .menu-telephone {
+      display: none;
+    }
+    .menu-desktop {
+      display: none;
+    }
+  }
+  
+  .menu-telephone {
+    display:flex;
+    z-index:145;
+  }
+
+
+  @media screen and (max-width: 835px) {
+    .menu-telephone {
+      display: none;
+    }
+    .menu-desktop {
+      display: none;
+    }
+  }
+
+.menu-telephone ul {
+    display: flex; 
+    flex-flow: column nowrap;
+    align-items: stretch;
+    gap: 5rem;
+}
+
+.menu-telephone li{
+    /* flex-grow: 1; 
+    flex-shrink: 2; 
+    flex-basis: 1;  */
+    padding-left: 10px;
+}
+  
+
+/* FERNANDO MENU TELEPHONE END */
 
 .descktop,
 ul {
@@ -360,9 +464,6 @@ form .btn-harmo {
     height: auto;
 }
 
-.wrapper-mont-resp{
-    height: 3rem; 
-}
 
 /* UNE DESTINATION DE REVE */
 
@@ -370,7 +471,7 @@ form .btn-harmo {
     background-image: linear-gradient(to bottom, rgb(35, 52, 93) 0%, rgb(207, 208, 212) 19%, rgb(182, 199, 237) 100%);
 }
 .ghost-height{
-    height: 64.25rem;
+    height: clamp(64.25rem, 3vw + 12rem, 100rem);
 }
 
 .wrapper-montagnes {
@@ -444,6 +545,7 @@ h2 {
 
 .presentation-flex {
     /* margin-top: 13rem; */
+    padding-top: 13rem;
     background-image: linear-gradient(to bottom, rgb(91, 131, 225), rgb(151, 172, 222));
     position: relative;
 }
@@ -482,13 +584,15 @@ article {
 
 .svg-deco-pres {
     position: absolute;
-    width: 14rem;
+    width: clamp(8rem, 10vw, 14rem);
     color: white;
 }
 
 .top-deco-1 {
 
     left: 25rem;
+    top:10rem;
+    z-index:5; 
 }
 
 .top-deco-2 {
