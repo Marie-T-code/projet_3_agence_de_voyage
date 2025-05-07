@@ -1,0 +1,41 @@
+/* Mobile - jusqu'à 480px */
+@media (max-width: 480px) {
+    .ghost-height {
+        height: 19rem;
+    }
+}
+
+/* Petit écran */
+@media (min-width: 481px) and (max-width: 768px) {
+    .ghost-height {
+        height: clamp(19rem, 5vw + 19rem, 44rem);
+    }
+}
+
+/* Moyenne gamme - tablettes & petits laptops (cacher svg montagne) */
+@media (min-width: 769px) and (max-width: 1366px) {
+    .ghost-height {
+        height: clamp(32rem, 5vw + 12rem, 64.25rem);
+    }
+}
+
+/* Desktop standard */
+@media (min-width: 1367px) and (max-width: 1920px) {
+    .ghost-height {
+        height: min(max(50rem, 60rem), 80rem);
+    }
+}
+
+/* Ultra-wide */
+@media (min-width: 1921px) and (max-width: 2560px) {
+    .ghost-height {
+        height: 74rem;
+    }
+}
+
+/* Au-delà du raisonnable */
+@media (min-width: 2561px) {
+    .ghost-height {
+        height: 100rem;
+    }
+}
