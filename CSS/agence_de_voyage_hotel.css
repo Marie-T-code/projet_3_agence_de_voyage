@@ -369,11 +369,14 @@ form .btn-harmo {
 .presentation {
     background-image: linear-gradient(to bottom, rgb(35, 52, 93) 0%, rgb(207, 208, 212) 19%, rgb(182, 199, 237) 100%);
 }
+.ghost-height{
+    height: 64.25rem;
+}
 
 .wrapper-montagnes {
     position: relative;
     width: 100vw;
-    height: 46.25rem;
+z-index:2;
 }
 
 .wrapper-montagnes svg {
@@ -435,13 +438,12 @@ h2 {
     margin:0;
     overflow: visible;
     display:block; 
-    line-height:0; 
   }
 
 /* section description flex (photos => responsive scrset GIMP a faire) */
 
 .presentation-flex {
-    margin-top: 13rem;
+    /* margin-top: 13rem; */
     background-image: linear-gradient(to bottom, rgb(91, 131, 225), rgb(151, 172, 222));
     position: relative;
 }
