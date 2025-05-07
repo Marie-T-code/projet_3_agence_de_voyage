@@ -311,6 +311,9 @@ svg {
   padding-top: -10px;
   width: 100%;
 }
+section .comanteur {
+  background-color: #004b7c;
+}
 
 /* media screen */
 @media screen and (max-width: 835px) {
