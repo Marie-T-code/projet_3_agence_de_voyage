@@ -38,13 +38,14 @@ header {
   height: 100vh;
   padding: 20px;
   position: fixed;
-  padding: 20px 0 0px 1%;
-  box-shadow: 3px 0 0 #ffff;
+  padding: 30px 0 0px 1%;
+  box-shadow: 3px 0 0 #00bfff;
   margin-top: -10px;
   top: 0;
   left: -30px;
   overflow: hidden;
   transition: 0.2s;
+  z-index: 145;
 }
 
 .menu-telephone:hover {
@@ -52,20 +53,22 @@ header {
 }
 
 .item-menu a {
-  color: white;
+  color: rgb(205, 205, 205);
   text-decoration: none;
   display: flex;
   margin-bottom: 70px;
-  gap: 20px;
-  line-height: 40px;
+  gap: 10px;
+  line-height: 60px;
 }
 .menu-telephone li {
+  padding-left: -18px;
   list-style: none;
   transform: 0.2s;
 }
 .menu-telephone li:hover {
-  width: 100%;
-  background-color: white;
+  width: 120%;
+
+  background-color: #00bfff;
 }
 
 .menu-dst {
@@ -74,7 +77,6 @@ header {
   width: 80%;
   height: 20%;
   line-height: 40px;
-
   margin-left: 120px;
 }
 
@@ -82,11 +84,13 @@ header {
   margin-left: 10px;
 }
 .item-menu a .txt-link:hover {
-  color: black;
+  color: rgb(255, 255, 255);
 }
-
+.item-menu a:hover {
+  color: #ffffff;
+}
 .menu-telephone {
-  display: none;
+  display: flex;
 }
 
 /*  menu desktop */
@@ -393,11 +397,104 @@ h2 {
   align-self: flex-end;
   padding-bottom: 1rem;
 }
+/* questionner */
+
+section .questionner {
+  width: 100%;
+  height: 100%;
+}
+section.questionner img {
+  width: 100%;
+  object-fit: cover;
+}
+.questioner {
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  padding: 30px;
+  width: 420px;
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+}
+
+.questioner h1 {
+  font-size: 30px;
+  text-align: center;
+  color: white;
+  margin-bottom: 30px;
+}
+.questioner .input-box {
+  width: 100%;
+  position: relative;
+  margin-bottom: 25px;
+}
+.questioner .input-box input {
+  width: 100%;
+  padding: 15px;
+  border-radius: 25px;
+  outline: none;
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  padding-right: 40px;
+}
+.questioner .input-box input::placeholder {
+  color: aliceblue;
+}
+.input-box i {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  color: white;
+}
+.remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+  color: white;
+  margin-bottom: 25px;
+}
+.remember-forgot a,
+.register-link a {
+  color: white;
+  text-decoration: none;
+  transition: 0.5s;
+  font-weight: bold;
+}
+.remember-forgot a,
+.register-link a:hover {
+  text-decoration: underline;
+}
+.login-btn {
+  width: 100%;
+  padding: 15px;
+  border-radius: 25px;
+  outline: none;
+  border: 0;
+  font-weight: bolder;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: 0.5s;
+}
+
+.login-btn:hover {
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.register-link {
+  text-align: center;
+  margin-top: 25px;
+  color: white;
+  font-size: 14;
+}
+
+/* questionner */
 
 /* media screen */
 @media screen and (max-width: 835px) {
   .menu-telephone {
-    display: none;
+    display: flex;
   }
   .menu-desktop {
     display: none;
