@@ -1,0 +1,77 @@
+/* footer */
+
+footer {
+    display: flex;
+    flex-flow: column nowrap;
+    background-color: white;
+    color: rgb(35, 52, 93)
+}
+
+.footer-flex {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.branding-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 1px #4360A9;
+    padding: 1rem;
+}
+
+.logos-footer {
+    max-width: 5rem;
+    margin-top: 0.6rem;
+}
+
+.textes {
+    line-height: 1.25rem;
+}
+
+.brands {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.slogan {
+    font-size: 0.875rem;
+    font-weight: 300;
+}
+
+.mentions-legales {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    padding: 1rem;
+}
+
+.footer-subtitles {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+footer ul {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-content: center;
+    gap: 0.125rem;
+}
+
+footer li {
+    transition: none;
+    padding: 0;
+    font-weight: 200;
+    color: black;
+}
+
+footer li:hover {
+    background-color: transparent;
+    color: inherit;
+    border-radius: 0;
+    cursor: pointer;
+}
