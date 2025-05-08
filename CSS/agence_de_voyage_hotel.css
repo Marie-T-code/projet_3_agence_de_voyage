@@ -36,7 +36,7 @@ Utile pour des mises en page pleine hauteur (par exemple, en flex ou grid).
 */
 body {
     min-height: 100vh;
-    background-color: rgb(35, 52, 93);
+    background-color: var(--darkest-blue);
 }
 
 /* 
@@ -89,10 +89,27 @@ figcaption {
 
 
 a, a:link,  a:visited, a:hover, a:focus, a:active {
-    color: black;
+    color: var(--black);
     text-decoration: none;
     cursor: pointer;
 }
+
+
+/* VARIABLES */
+
+:root{
+    --black: rgb(0, 0, 0);
+    --shadow-dark: rgba(0, 0, 0, 0.7);
+    --darkest-blue: rgb(0, 53, 89);
+    --dark-blue: rgb(0, 75, 124);
+    --blue: rgb(3, 117, 155);
+    --light-blue: rgb(0, 191, 255);
+    --lightest-blue: rgb(192, 223, 231);
+    --white: rgb(255,255,255);
+
+}
+
+/* HERO */
 
 .hero {
     background-image: url(../img/section_hero/hero_hotel.png);
@@ -103,7 +120,7 @@ a, a:link,  a:visited, a:hover, a:focus, a:active {
     position: relative;
 }
 .hero a, a:link,  a:visited, a:hover, a:focus, a:active {
-    color: #03759b;
+    color: var(--blue);
 }
 .logo img {
     max-width: 5em;
@@ -117,7 +134,7 @@ a, a:link,  a:visited, a:hover, a:focus, a:active {
 }
 
 .top-nav {
-    background-image: linear-gradient(to bottom, #c5c5c5, #c5c5c58f, transparent);
+    background-image: linear-gradient(to bottom, #c5c5c5, #c4c4c48f, transparent);
 
 }
 /* FERNANDO MENU TELEPHONE START */
@@ -131,7 +148,7 @@ a, a:link,  a:visited, a:hover, a:focus, a:active {
     /* padding: 20px; */
     position: fixed;
     padding: 20px 0 0px 0.5%;
-    box-shadow: 3px 0 0 #00bfff;
+    box-shadow: 3px 0 0 var(--light-blue);
     margin-top: -10px;
     top: 0;
     left: -30px;
@@ -159,7 +176,7 @@ a, a:link,  a:visited, a:hover, a:focus, a:active {
   }
   .menu-telephone li:hover {
     width: 135%;
-    background-color: #00bfff;
+    background-color: var(--light-blue);
   }
   
   .menu-dst {
@@ -176,11 +193,11 @@ a, a:link,  a:visited, a:hover, a:focus, a:active {
     margin-left: 10px;
   }
   .item-menu a:hover {
-    color: rgb(255, 255, 255);
+    color: var(--white);
   }
 
   .item-menu a .txt-link:hover {
-    color: rgb(255, 255, 255);
+    color: var(--white);
   }
   @media screen and (max-width: 835px) {
     .menu-telephone {
@@ -214,9 +231,6 @@ a, a:link,  a:visited, a:hover, a:focus, a:active {
 }
 
 .menu-telephone li{
-    /* flex-grow: 1; 
-    flex-shrink: 2; 
-    flex-basis: 1;  */
     padding-left: 10px;
 }
   
@@ -225,14 +239,14 @@ a, a:link,  a:visited, a:hover, a:focus, a:active {
 
 .descktop,
 ul {
-    color: white;
+    color: var(--white);
     text-decoration: none;
     list-style-type: none;
     display: flex;
     gap: 1.875rem;
     padding: 0.6rem 1.5rem;
     font-weight: bold;
-    color: #03759b;
+    color: var(--blue);
     transition: 0.5s;
 }
 
@@ -243,8 +257,8 @@ ul li {
 
 .descktop,
 ul li:hover {
-    background-color: #00bfff;
-    color: #ffffff;
+    background-color: var(--light-blue);
+    color: var(--white);
     border-radius: 0.6rem;
 }
 
@@ -259,25 +273,25 @@ ul li:hover {
 }
 
 h1 {
-    color: white;
+    color: var(--white);
     text-align: center;
     text-transform: uppercase;
     font-weight: 900;
     font-size: 5.625rem;
     box-sizing: border-box;
-    text-shadow: 2px 2px 0.5rem rgba(0, 0, 0, 0.7);
+    text-shadow: 2px 2px 0.5rem var(--shadow-dark);
     margin-top: 15%;
     align-items: center;
 }
 
 .ss-t-hero {
     font-family: "Poppins", sans-serif;
-    color: white;
+    color: var(--white);
     text-align: center;
     font-weight: bold;
     font-size: 3.125rem;
     margin-top: -0.6rem;
-    text-shadow: 2px 2px 0.5rem rgba(0, 0, 0, 0.7);
+    text-shadow: 2px 2px 0.5rem var(--shadow-dark);
 }
 
 /* fondu bleu foncé */
@@ -286,7 +300,7 @@ h1 {
     height: 15rem;
     position: absolute; 
     bottom:0; 
-    background-image: linear-gradient(to bottom, transparent, rgb(35, 52, 93));
+    background-image: linear-gradient(to bottom, transparent, var(--darkest-blue));
 }
 
 /* SECTION GRID CARROUSSEL */
@@ -294,7 +308,7 @@ h1 {
 
 .hotel_ph_d {
     /* hotel photo display */
-    background-color: rgb(35, 52, 93);
+    background-color: (--darkest-blue);
 
     position: relative;
 }
@@ -307,7 +321,7 @@ h1 {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     border-radius: 2px;
-    background-color: #4360A9;
+    background-color: var(--dark-blue);
     margin-top: 3rem;
     margin-bottom: 3rem;
 }
@@ -372,7 +386,7 @@ form .btn-harmo {
 }
 
 .champ-style {
-    background-color: #d8d8d8;
+    background-color: (--lightest-blue);
     border: none;
     border-radius: 3px;
     padding: 0.6rem;
@@ -384,8 +398,7 @@ form .btn-harmo {
     position: relative;
     padding-top: 2rem;
 }
-.wrapper-ph-gal img{
-}
+
 .photos-flex {
     display: flex;
     flex-flow: row nowrap;
@@ -418,12 +431,12 @@ form .btn-harmo {
 }
 
 .chevron:first-child {
-    color: white;
+    color: var(--white);
     left: -2rem;
 }
 
 .chevron:last-child {
-    color: white;
+    color: var(--white);
     right: -2rem;
 }
 
@@ -459,7 +472,7 @@ form .btn-harmo {
 }
 
 .illustration-oiseaux svg {
-    fill: white;
+    fill: var(--white);
     width: 100%;
     height: auto;
 }
@@ -468,7 +481,7 @@ form .btn-harmo {
 /* UNE DESTINATION DE REVE */
 
 .presentation {
-    background-image: linear-gradient(to bottom, rgb(35, 52, 93) 0%, rgb(207, 208, 212) 19%, rgb(182, 199, 237) 100%);
+    background-image: linear-gradient(to bottom, var(--darkest-blue) 0%, rgb(207, 208, 212) 19%, var(--lightest-blue) 100%);
 }
 .ghost-height{
     height: clamp(64.25rem, 3vw + 12rem, 100rem);
@@ -488,22 +501,21 @@ z-index:2;
 }
 
 .montagne-1 {
-    fill: rgb(35, 52, 93);
+    fill: var(--darkest-blue);
 }
 
 .wrapper-montagnes .montagne-2 {
-    fill: rgb(57, 85, 151);
+    fill: var(--dark-blue);
 }
 
 .montagne-3 {
-    fill: rgb(91, 131, 225);
+    fill: var(--blue);
 }
 
 /* RESPONSIVE A PREVOIR */
 
 .wrapper-montagnes .edelweiss {
-    color: white;
-    fill: white;
+    color: var(--white);
     width: clamp(8rem, 11vw, 12rem);
     top: clamp(8rem, 10vh, 12rem);
     left: clamp(40rem, 65vw, 65rem);
@@ -511,8 +523,7 @@ z-index:2;
 
 /* RESPONSIVE A PREVOIR (clamp mini fucked up ptet virer les svg) */
 .wrapper-montagnes .chevre {
-    color: white;
-    fill: white;
+    color: var(--white);
     width: clamp(5rem, 10vw, 12rem);
     top: clamp(0.1rem, 35rem, 50rem);
     left: clamp(3rem, 5vw, 8rem);
@@ -521,7 +532,7 @@ z-index:2;
 h2 {
     font-size: 1.25rem;
     font-weight: 800;
-    background-color: white;
+    background-color: var(--white);
     margin: 0 16rem;
     padding: 1.5rem;
     text-align: center;
@@ -546,12 +557,12 @@ h2 {
 .presentation-flex {
     /* margin-top: 13rem; */
     padding-top: 13rem;
-    background-image: linear-gradient(to bottom, rgb(91, 131, 225), rgb(151, 172, 222));
+    background-image: linear-gradient(to bottom, var(--blue) -20%, var(--blue) 20%, var(--light-blue) 100%);
     position: relative;
 }
 
 .desc-texte {
-    background-color: rgb(198, 207, 228);
+    background-color: var(--lightest-blue);
     box-shadow: 6px 6px 0.9rem white;
     align-self: center;
     padding: 3rem;
@@ -585,7 +596,7 @@ article {
 .svg-deco-pres {
     position: absolute;
     width: clamp(8rem, 10vw, 14rem);
-    color: white;
+    color: var(--white);
 }
 
 .top-deco-1 {
@@ -616,8 +627,8 @@ article {
     position: relative;
     min-height: 40rem;
     padding-bottom: 15rem;
-    background-color: rgb(151, 172, 222);
-    background-image: linear-gradient(to bottom, rgb(151, 172, 222) 0%, rgb(240, 239, 239) 70%, rgb(255, 255, 255)100%);
+    /* background-color: var(--lightest-blue); */
+    background-image: linear-gradient(to bottom, var(--light-blue) 0%, var(--lightest-blue) 70%, var(--white)100%);
 }
 
 
@@ -646,6 +657,10 @@ article {
 }
 .illustrations{
     position: absolute; 
+    top:0; 
+    left:0; 
+    width: 100vw; 
+    height:auto; 
 }
 
 .montagne-4 {
@@ -657,10 +672,12 @@ article {
 
 .oiseaux-2 {
     position: absolute;
+    top: 45rem;
     width: 35rem;
     left: 25rem;
-    z-index: 2;
-    filter:drop-shadow(0 0.1rem 0.3rem rgba(35, 52, 93, 0.405))
+    z-index: 6;
+    fill: var(--dark-blue);
+    filter:drop-shadow(0 0.1rem 0.3rem rgba(0, 53, 89, 0.405));
 }
 
 /* footer */
@@ -668,8 +685,8 @@ article {
 footer{
     display: flex; 
     flex-flow:column nowrap;
-    background-color: white;
-    color:rgb(35, 52, 93)
+    background-color: var(--white);
+    color:var(--dark-blue);
 }
 
 .footer-flex{
@@ -682,7 +699,7 @@ footer{
     display: flex; 
     justify-content:space-between; 
     align-items: center; 
-    border-bottom: solid 1px #4360A9;
+    border-bottom: solid 1px var(--blue);
     padding: 1rem; 
 }
 
@@ -729,7 +746,7 @@ footer li{
  transition: none;
  padding:0; 
  font-weight: 200; 
- color: black; 
+ color: var(--blue); 
 }
 
 footer li:hover{
@@ -739,6 +756,10 @@ footer li:hover{
     cursor:pointer; 
 }
 
+.contact{
+    padding-bottom: 1.125rem;
+}
+
 /* BOUTON STICKY */
 
 .logo-sticky{
@@ -746,7 +767,7 @@ footer li:hover{
     bottom: clamp(2rem, 5vh, 4rem);
     right: 2rem;
     max-width: 6rem;
-    filter: drop-shadow(0.3rem 0.3rem 0.3rem rgb(35, 52, 93));
+    filter: drop-shadow(0.3rem 0.3rem 0.3rem var(--darkest-blue));
     z-index:999;
     background: none;
     padding: 0; /* crucial */
