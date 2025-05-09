@@ -91,7 +91,7 @@ header {
   color: #ffffff;
 }
 .menu-telephone {
-  display: flex;
+  display: none;
 }
 
 /*  menu desktop */
@@ -408,17 +408,19 @@ h2 {
   height: 79rem;
   overflow-x: hidden;
 }
+.principal {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 100px;
+}
+
 .questioner {
   background-color: transparent;
   border: 2px solid rgba(255, 255, 255, 0.2);
   padding: 30px;
-  width: 500px;
+  width: 420px;
   border-radius: 20px;
   backdrop-filter: blur(20px);
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: 40%;
-  margin-top: 20%;
 }
 
 .questioner h1 {
@@ -428,10 +430,12 @@ h2 {
   margin-bottom: 30px;
 }
 .questioner .input-box {
+  width: 100%;
+  position: relative;
   margin-bottom: 25px;
 }
 .questioner .input-box input {
-  width: 100%;
+  width: 90%;
   padding: 15px;
   border-radius: 25px;
   outline: none;
@@ -461,7 +465,7 @@ h2 {
 .register-link a {
   color: white;
   text-decoration: none;
-  transition: 0.5s;
+  tansition: 0.5s;
   font-weight: bold;
 }
 .remember-forgot a,
@@ -469,7 +473,8 @@ h2 {
   text-decoration: underline;
 }
 .login-btn {
-  width: 100%;
+  align-items: center;
+  width: 90%;
   padding: 15px;
   border-radius: 25px;
   outline: none;
@@ -490,6 +495,80 @@ h2 {
   margin-top: 25px;
   color: white;
   font-size: 14;
+}
+
+/* iscription */
+
+.inscri {
+  background-color: transparent;
+  border: 2px solid rgb(255, 255, 255, 0.2);
+  padding: 30px;
+  width: 420px;
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+}
+
+.inscri h1 {
+  font-size: 30px;
+  text-align: center;
+  color: white;
+  margin-bottom: 30px;
+}
+.inscri-1 {
+  display: flex;
+  width: 50%;
+}
+.inscri .inscri-1 {
+  width: 100%;
+  gap: 10px;
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.inscri .inscri-1 input {
+  width: 50%;
+  padding: 10px;
+  border-radius: 25px;
+  outline: none;
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  padding-right: 40px;
+}
+.inscri ::placeholder {
+  text-align: center;
+  color: white;
+}
+
+.inscri-ms input {
+  padding: 15%;
+  border-radius: 25px;
+  width: 75%;
+  outline: none;
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  padding-right: 40px;
+  align-items: center;
+}
+.btn {
+}
+.btn-1 {
+  margin-top: 20px;
+  align-items: center;
+  width: 90%;
+  padding: 15px;
+  border-radius: 25px;
+  outline: none;
+  border: 0;
+  font-weight: bolder;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: 0.5s;
+}
+.btn-1 :hover {
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 /* questionner */
