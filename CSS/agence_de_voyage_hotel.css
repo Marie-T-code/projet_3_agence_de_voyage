@@ -83,12 +83,17 @@ figcaption {
     padding: 0.6rem 8vw;
 }
 
-.padding-top{ 
+.padding-top {
     padding-top: 1rem;
 }
 
 
-a, a:link,  a:visited, a:hover, a:focus, a:active {
+a,
+a:link,
+a:visited,
+a:hover,
+a:focus,
+a:active {
     color: var(--black);
     text-decoration: none;
     cursor: pointer;
@@ -97,7 +102,7 @@ a, a:link,  a:visited, a:hover, a:focus, a:active {
 
 /* VARIABLES */
 
-:root{
+:root {
     --black: rgb(0, 0, 0);
     --shadow-dark: rgba(0, 0, 0, 0.7);
     --darkest-blue: rgb(0, 53, 89);
@@ -105,7 +110,7 @@ a, a:link,  a:visited, a:hover, a:focus, a:active {
     --blue: rgb(3, 117, 155);
     --light-blue: rgb(0, 191, 255);
     --lightest-blue: rgb(192, 223, 231);
-    --white: rgb(255,255,255);
+    --white: rgb(255, 255, 255);
 
 }
 
@@ -119,9 +124,16 @@ a, a:link,  a:visited, a:hover, a:focus, a:active {
     min-height: 100svh;
     position: relative;
 }
-.hero a, a:link,  a:visited, a:hover, a:focus, a:active {
+
+.hero a,
+a:link,
+a:visited,
+a:hover,
+a:focus,
+a:active {
     color: var(--blue);
 }
+
 .logo img {
     max-width: 5em;
     margin-top: 0.6rem;
@@ -137,14 +149,15 @@ a, a:link,  a:visited, a:hover, a:focus, a:active {
     background-image: linear-gradient(to bottom, #c5c5c5, #c4c4c48f, transparent);
 
 }
+
 /* FERNANDO MENU TELEPHONE START */
 
 
 .menu-telephone {
     background-color: transparent;
     backdrop-filter: blur(20px);
-    width: 80px;
-    height: 100vh;
+    max-width: 80px;
+    min-height: 100vh;
     /* padding: 20px; */
     position: fixed;
     padding: 20px 0 0px 0.5%;
@@ -154,86 +167,82 @@ a, a:link,  a:visited, a:hover, a:focus, a:active {
     left: -30px;
     overflow: hidden;
     transition: 0.2s;
-  }
-  
-  .menu-telephone:hover {
-    width: 300px;
-  }
-  
-  .item-menu a {
+}
+
+.menu-telephone:hover {
+    max-width: 300px;
+}
+
+.item-menu a {
     color: rgb(205, 205, 205);
     text-decoration: none;
     display: flex;
     margin-bottom: 5px;
     gap: 20px;
-   font-size:1.5rem;
+    font-size: 1.5rem;
     /* line-height: 40px; */
-  }
-  .menu-telephone li {
+}
+
+.menu-telephone li {
     list-style: none;
     transform: 0.2s;
-    margin-left:0.4rem;
-  }
-  .menu-telephone li:hover {
-    width: 135%;
+    margin-left: 0.4rem;
+}
+
+.menu-telephone li:hover {
+    max-width: 135%;
     background-color: var(--light-blue);
-  }
-  
-  .menu-dst {
+}
+
+.menu-dst {
     display: flex;
     justify-content: space-between;
-    width: 80%;
-    height: 20%;
+    max-width: 80%;
+    min-height: 20%;
     line-height: 40px;
-  
+
     margin-left: 120px;
-  }
-  
-  .incon i {
+}
+
+.incon i {
     margin-left: 10px;
-  }
-  .item-menu a:hover {
+}
+
+.item-menu a:hover {
     color: var(--white);
-  }
+}
 
-  .item-menu a .txt-link:hover {
+.item-menu a .txt-link:hover {
     color: var(--white);
-  }
-  @media screen and (max-width: 835px) {
-    .menu-telephone {
-      display: none;
-    }
-    .menu-desktop {
-      display: none;
-    }
-  }
-  
-  .menu-telephone {
-    display:flex;
-    z-index:145;
-  }
+}
 
-
-  @media screen and (max-width: 835px) {
+@media screen and (max-width: 835px) {
     .menu-telephone {
-      display: none;
+        display: none;
     }
+
     .menu-desktop {
-      display: none;
+        display: none;
     }
-  }
+}
+
+.menu-telephone {
+    display: flex;
+    z-index: 145;
+}
+
 
 .menu-telephone ul {
-    display: flex; 
+    display: flex;
     flex-flow: column nowrap;
     align-items: stretch;
     gap: 5rem;
 }
 
-.menu-telephone li{
+.menu-telephone li {
     padding-left: 10px;
 }
-  
+
 
 /* FERNANDO MENU TELEPHONE END */
 
@@ -296,10 +305,10 @@ h1 {
 
 /* fondu bleu foncé */
 .fondu_bf {
-    width: 100%;
-    height: 15rem;
-    position: absolute; 
-    bottom:0; 
+    max-width: 100%;
+    min-height: 15rem;
+    position: absolute;
+    bottom: 0;
     background-image: linear-gradient(to bottom, transparent, var(--darkest-blue));
 }
 
@@ -367,20 +376,20 @@ h1 {
 
 .icon-loupe {
     box-sizing: border-box;
-    max-height: 1.2rem;
+    min-height: 1.2rem;
 }
 
 form .btn-harmo {
 
-    height: 1.5rem;
+    min-height: 1.5rem;
 }
 
 .harmo-form {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 7.5rem;
-    height: 3rem;
+    max-width: 7.5rem;
+    min-height: 3rem;
     padding: 0 0.5rem;
     box-sizing: border-box;
 }
@@ -421,13 +430,17 @@ form .btn-harmo {
     transform: translateY(-50%);
     /* centrage parfait de la flèche  */
     z-index: 2;
+    width: clamp(2.5rem, 4vw, 4rem);
+    height: clamp(2.5rem, 4vw, 4rem);
     cursor: pointer;
     padding: 0.5rem;
 }
 
 .chevron svg {
-    width: 4rem;
-    height: 4rem;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .chevron:first-child {
@@ -447,8 +460,8 @@ form .btn-harmo {
 }
 
 .img-cell img {
-    width: 100%;
-    height: 100%;
+    max-width: 100%;
+    min-height: 100%;
     object-fit: cover;
     border-radius: 1rem;
 }
@@ -463,6 +476,7 @@ form .btn-harmo {
     grid-row-start: 2;
     grid-row-end: 3;
 }
+
 .boite-photos:hover .img-cell {
     filter: brightness(0.5);
 }
@@ -471,9 +485,20 @@ form .btn-harmo {
     filter: brightness(1);
 }
 
+.illustration-oiseaux{
+    position: relative; 
+    left: 16vw; 
+    right: 16vw; 
+    max-width: clamp(16rem, 50vw, 80vw);
+    min-height: clamp(20rem, 60vh, 42rem); 
+    z-index:-1; 
+    margin-bottom: min(8vw, 10rem);
+}
+
 .illustration-oiseaux svg {
+    position: absolute; 
     fill: var(--white);
-    width: 100%;
+    max-width: clamp(20rem, 60vw, 80vw);
     height: auto;
 }
 
@@ -483,14 +508,15 @@ form .btn-harmo {
 .presentation {
     background-image: linear-gradient(to bottom, var(--darkest-blue) 0%, rgb(207, 208, 212) 19%, var(--lightest-blue) 100%);
 }
-.ghost-height{
-    height: clamp(64.25rem, 3vw + 12rem, 100rem);
+
+.ghost-height {
+    min-height: clamp(64.25rem, 3vw + 12rem, 100rem);
 }
 
 .wrapper-montagnes {
     position: relative;
-    width: 100vw;
-z-index:2;
+    max-width: 100vw;
+    z-index: 2;
 }
 
 .wrapper-montagnes svg {
@@ -514,17 +540,24 @@ z-index:2;
 
 /* RESPONSIVE A PREVOIR */
 
+.wrapper-edelweiss{
+        position: relative; 
+  left: 50%;
+  transform: translateX(17%);
+  top: 8rem; 
+    z-index:2; 
+}
+
 .wrapper-montagnes .edelweiss {
+    position: absolute;
     color: var(--white);
-    width: clamp(8rem, 11vw, 12rem);
-    top: clamp(8rem, 10vh, 12rem);
-    left: clamp(40rem, 65vw, 65rem);
+    max-width: clamp(4rem, 11vw, 12rem);
 }
 
 /* RESPONSIVE A PREVOIR (clamp mini fucked up ptet virer les svg) */
 .wrapper-montagnes .chevre {
     color: var(--white);
-    width: clamp(5rem, 10vw, 12rem);
+    max-width: clamp(5rem, 10vw, 12rem);
     top: clamp(0.1rem, 35rem, 50rem);
     left: clamp(3rem, 5vw, 8rem);
 }
@@ -545,12 +578,12 @@ h2 {
 
 .ilustration-presentation {
     position: relative;
-    height: auto; 
-    padding:0; 
-    margin:0;
+    height: auto;
+    padding: 0;
+    margin: 0;
     overflow: visible;
-    display:block; 
-  }
+    display: block;
+}
 
 /* section description flex (photos => responsive scrset GIMP a faire) */
 
@@ -584,13 +617,15 @@ article {
     display: flex;
     flex-flow: column nowrap;
     gap: 1rem;
-    max-height: 35rem;
+    width: clamp(10rem, 25vw, 20rem);
+    min-height: 35rem;
     overflow-y: auto;
     scroll-behavior: smooth;
 }
 
 .desc-photo img {
-    max-width: 30rem;
+    width: clamp(10rem, 20vw, 18rem);
+    height: auto;
 }
 
 .svg-deco-pres {
@@ -602,8 +637,8 @@ article {
 .top-deco-1 {
 
     left: 25rem;
-    top:10rem;
-    z-index:5; 
+    top: 10rem;
+    z-index: 5;
 }
 
 .top-deco-2 {
@@ -652,15 +687,17 @@ article {
 }
 
 .map {
-    width: 60rem;
+    width: clamp(18rem, 40vw, 32rem);
+    min-height: 12rem;
     background-color: rgb(35, 52, 93);
 }
-.illustrations{
-    position: absolute; 
-    top:0; 
-    left:0; 
-    width: 100vw; 
-    height:auto; 
+
+.illustrations {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: auto;
 }
 
 .montagne-4 {
@@ -673,104 +710,106 @@ article {
 .oiseaux-2 {
     position: absolute;
     top: 45rem;
-    width: 35rem;
-    left: 25rem;
+    width: 20rem;
+    left: 15rem;
     z-index: 6;
     fill: var(--dark-blue);
-    filter:drop-shadow(0 0.1rem 0.3rem rgba(0, 53, 89, 0.405));
+    filter: drop-shadow(0 0.1rem 0.3rem rgba(0, 53, 89, 0.405));
 }
 
 /* footer */
 
-footer{
-    display: flex; 
-    flex-flow:column nowrap;
+footer {
+    display: flex;
+    flex-flow: column nowrap;
     background-color: var(--white);
-    color:var(--dark-blue);
+    color: var(--dark-blue);
 }
 
-.footer-flex{
-    display: flex; 
-    justify-content:space-between;
+.footer-flex {
+    display: flex;
+    justify-content: space-between;
     padding: 1rem;
 }
 
-.branding-flex{
-    display: flex; 
-    justify-content:space-between; 
-    align-items: center; 
+.branding-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     border-bottom: solid 1px var(--blue);
-    padding: 1rem; 
+    padding: 1rem;
 }
 
-.logos-footer{
+.logos-footer {
     max-width: 5rem;
     margin-top: 0.6rem;
 }
-.textes{
-    line-height: 1.25rem ;
-}
-.brands{
-    font-size: 1rem; 
-    font-weight: 700; 
+
+.textes {
+    line-height: 1.25rem;
 }
 
-.slogan{
-    font-size: 0.875rem; 
+.brands {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.slogan {
+    font-size: 0.875rem;
     font-weight: 300;
 }
 
-.mentions-legales{
+.mentions-legales {
     display: flex;
     justify-content: space-between;
     font-size: 0.75rem;
     padding: 1rem;
 }
 
-.footer-subtitles{
-    text-align: center; 
+.footer-subtitles {
+    text-align: center;
     font-size: 1rem;
     font-weight: 600;
     text-transform: uppercase;
 }
 
-footer ul{
-    display: flex; 
-    flex-flow: column nowrap; 
-    justify-content: center; 
-    align-content: center; 
-    gap:0.125rem;
+footer ul {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-content: center;
+    gap: 0.125rem;
 }
 
-footer li{
- transition: none;
- padding:0; 
- font-weight: 200; 
- color: var(--blue); 
+footer li {
+    transition: none;
+    padding: 0;
+    font-weight: 200;
+    color: var(--blue);
 }
 
-footer li:hover{
-    background-color: transparent; 
-    color: inherit; 
-    border-radius: 0; 
-    cursor:pointer; 
+footer li:hover {
+    background-color: transparent;
+    color: inherit;
+    border-radius: 0;
+    cursor: pointer;
 }
 
-.contact{
+.contact {
     padding-bottom: 1.125rem;
 }
 
 /* BOUTON STICKY */
 
-.logo-sticky{
-    position: fixed; 
+.logo-sticky {
+    position: fixed;
     bottom: clamp(2rem, 5vh, 4rem);
     right: 2rem;
     max-width: 6rem;
     filter: drop-shadow(0.3rem 0.3rem 0.3rem var(--darkest-blue));
-    z-index:999;
+    z-index: 999;
     background: none;
-    padding: 0; /* crucial */
+    padding: 0;
+    /* crucial */
     border: none;
 }
-
