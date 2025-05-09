@@ -19,6 +19,17 @@
     }
 }
 
+/* téléphone Fernando */
+
+ @media screen and (max-width: 835px) {
+    .menu-telephone {
+      display: none;
+    }
+    .menu-desktop {
+      display: none;
+    }
+}
+
 /* Desktop standard */
 @media (min-width: 1367px) and (max-width: 1920px) {
     .ghost-height {
