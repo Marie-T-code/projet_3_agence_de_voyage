@@ -91,7 +91,7 @@ header {
   color: #ffffff;
 }
 .menu-telephone {
-  display: none;
+  display: ;
 }
 
 /*  menu desktop */
@@ -127,7 +127,7 @@ header {
 }
 
 .contener h1 {
-  margin-top: 250px;
+  margin-top: 100px;
   text-align: center;
   font-size: 90px;
 
@@ -273,12 +273,14 @@ input::placeholder {
   text-align: center;
 }
 .desc-button p {
-  color: #290303;
+  color: #000000;
   font-size: 25px;
   text-align: center;
-  padding-left: 590px;
+  padding-left: 315px;
 }
-
+.description {
+  width: 100%;
+}
 .description h1 {
   font-size: 20px;
   margin-bottom: 11px;
@@ -409,6 +411,22 @@ h2 {
   overflow-x: hidden;
   background-color: #1f1752;
 }
+
+.beckground-ques h1 {
+  text-align: center;
+  color: #1f1752;
+  margin-top: 20px;
+  font-size: 40px;
+}
+
+.beckground-ques p {
+  color: white;
+  text-align: center;
+}
+
+.beckground-ques p {
+}
+
 .principal {
   display: flex;
   justify-content: space-evenly;
