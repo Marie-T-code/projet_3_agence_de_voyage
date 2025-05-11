@@ -677,6 +677,7 @@ padding-inline: clamp(1rem, 5vw, 3rem);
 
 article {
     display: flex;
+    flex-wrap: nowrap; 
     gap: clamp(2rem, 5vw, 7rem);
     margin: clamp(6rem, 12vw, 16rem) clamp(1rem, 3vw, 3rem);
 }

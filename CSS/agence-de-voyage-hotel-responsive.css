@@ -90,6 +90,29 @@
     grid-column-start: auto;
   }
 
+  /* découvrez responsive */
+
+  article{
+    flex-flow: column nowrap; 
+    align-items: center; 
+  }
+
+  .article-reverse{
+    flex-flow: column-reverse nowrap;
+  }
+
+  /* map responsive */
+
+  .infos-map{
+    flex-direction: column; 
+  }
+
+  .map{
+    height: 25rem; 
+    max-width: 90vw;
+  }
+
+
     /* footer wrap */
     .footer-flex {
         display: flex;
