@@ -99,6 +99,11 @@ a:active {
     cursor: pointer;
 }
 
+/* empêcher les rebonds en bord de scroll sur les scrolls verticaux en mobile */
+html, body {
+  overscroll-behavior: contain;
+}
+
 
 /* VARIABLES */
 
@@ -388,9 +393,6 @@ ul li:hover {
 
 /* BARRE DE RECHERCHE */
 .container_dispos_boutons {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
     padding-block: clamp(0.75rem, 2.5vw, 1.5rem);
     /* padding-block: padding top et bottom en une commande */
     border-radius: 2px;
@@ -401,9 +403,18 @@ ul li:hover {
 
 .hotel-form {
     display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    gap: 6rem;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+     padding-inline: max(1.25rem, min(3rem, 3vw));
+}
+.hotel-form > * {
+    flex: 1 1 6rem;  
+    box-sizing:border-box; 
+    min-width:10rem; 
+    max-width: 15rem; 
+
 }
 
 /* Masque visuellement le contenu mais le rend accessible aux lecteurs d’écran.
@@ -441,11 +452,11 @@ ul li:hover {
 .icon-loupe {
     box-sizing: border-box;
     min-height: 1.2rem;
+    max-height:2rem;
 }
 
 form .btn-harmo {
-
-    min-height: 1.5rem;
+cursor: pointer;
 }
 
 .harmo-form {
@@ -454,7 +465,7 @@ form .btn-harmo {
     justify-content: center;
     max-width: 7.5rem;
     min-height: 3rem;
-    padding: 0 0.5rem;
+    padding: 0 0.7rem;
     box-sizing: border-box;
 }
 
@@ -677,7 +688,6 @@ article {
     width: clamp(30rem, 60%, 60rem);
     height: 35rem;
     overflow-y: auto;
-    scroll-behavior: smooth;
 }
 
 .desc-photo img {
@@ -751,7 +761,7 @@ article {
 
 .infos-map {
     display: flex;
-    flex-flow: row no wrap;
+    flex-flow: row nowrap;
     gap: clamp(1.5rem, 5vw, 8rem);
     position: relative;
     z-index: 2;
