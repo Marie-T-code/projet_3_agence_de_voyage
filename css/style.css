@@ -336,13 +336,14 @@ h2 {
   flex-flow: row nowrap;
   align-items: center;
   width: 100%;
+  justify-content: space-between;
 }
 
 .experience-container {
   flex-grow: 2;
   display: flex;
   align-items: center;
-  justify-content: center;
+
   background-color: #1f1752;
   padding: 40px;
   gap: 0;
@@ -691,5 +692,72 @@ footer li:hover {
   }
   .menu-desktop {
     display: none;
+  }
+
+  .contener h1 {
+    font-size: 30px;
+    margin-top: 100px;
+  }
+
+  .contener p {
+    font-size: 15px;
+    margin-top: 20px;
+  }
+
+  input {
+    margin-top: 50px;
+    margin-left: 80px;
+  }
+
+  .title {
+    font-size: 15px;
+    margin-top: 350px;
+    flex-wrap: wrap;
+  }
+
+  .desc-button p {
+    font-size: 12px;
+    margin-left: -12%;
+  }
+
+  .buttons {
+    display: none;
+  }
+
+  .gallerie {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+
+  .gallerie .image {
+    width: 70%;
+  }
+
+  .comanteur h2 {
+    font-size: 20px;
+    text-align: center;
+    gap: 20px;
+  }
+  .big-flex {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .experience-container {
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .beckground-ques h1 {
+    flex-wrap: wrap;
+  }
+
+  .principal {
+    display: none;
+  }
+
+  .questioner {
   }
 }
