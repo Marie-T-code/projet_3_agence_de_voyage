@@ -1,5 +1,9 @@
 // 📍 Initialisation de la carte centrée sur Megève
-const map = L.map('map').setView([45.8667, 6.6167], 14);
+const mapContainer = document.querySelector('.map');
+let map;
+if (mapContainer) {
+  map = L.map(mapContainer).setView([45.850, 6.63], 14);
+}
 
 // 🗺️ Ajout du fond de carte (OpenStreetMap)
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -17,7 +21,7 @@ function chargerGeoJSON(fichier, options) {
 }
 
 // 🏨 Couche Hôtel (point unique)
-chargerGeoJSON('hotel.geojson', {
+chargerGeoJSON('../tests/test_SIG/hotel.geojson', {
   pointToLayer: (feature, latlng) => L.circleMarker(latlng, {
     radius: 10,
     fillColor: "#0077ff",
@@ -33,7 +37,7 @@ chargerGeoJSON('hotel.geojson', {
 });
 
 // 🚁 Couche Transports (points catégorisés : gare, héliport...)
-chargerGeoJSON('transports.geojson', {
+chargerGeoJSON('../tests/test_SIG/transports.geojson', {
   pointToLayer: (feature, latlng) => {
     let couleur = "#999";
     const type = feature.properties.transport;
@@ -61,7 +65,7 @@ chargerGeoJSON('transports.geojson', {
 });
 
 // 🎧 Couche Sortir (restaurants et clubs)
-chargerGeoJSON('sortir.geojson', {
+chargerGeoJSON('../tests/test_SIG/sortir.geojson', {
   pointToLayer: (feature, latlng) => {
     const type = feature.properties.type;
     const couleur = type === "restaurant" ? "#2980B9" : "#8E44AD";
@@ -84,7 +88,7 @@ chargerGeoJSON('sortir.geojson', {
 });
 
 // 🥾 Couche Randonnée (lignes)
-chargerGeoJSON('randonnee.geojson', {
+chargerGeoJSON('../tests/test_SIG/randonnee.geojson', {
   style: feature => {
     const niveau = feature.properties.niveau;
     let couleur = "#27AE60"; // vert par défaut
@@ -107,7 +111,7 @@ chargerGeoJSON('randonnee.geojson', {
 });
 
 // 🎾 Couche Zones sportives (polygones)
-chargerGeoJSON('sports_detente.geojson', {
+chargerGeoJSON('../tests/test_SIG/sports_detente.geojson', {
   style: feature => {
     const type = feature.properties.type;
     let couleur = "#AED6F1";
