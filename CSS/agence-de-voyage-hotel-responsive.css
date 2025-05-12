@@ -1,42 +1,111 @@
-/* Mobile - jusqu'à 480px */
-@media (max-width: 480px) {
+/* Au-delà du raisonnable */
+@media (min-width: 2561px) {
     .ghost-height {
-        height: 8rem;
+        height: 100rem;
     }
-
-    .wrapper-chevre {
-        top: 10rem;
-        left: 5rem;
-    }
-
 }
 
-/* Petit écran */
-@media (min-width: 481px) and (max-width: 768px) {
+/* Desktop standard */
+@media (min-width: 1367px) and (max-width: 1920px) {
     .ghost-height {
-        /* height: clamp(8rem, 5vw + 19rem, 44rem); */
-        height: min(18rem, max(5vw + 19rem));
+        height: 40rem;
+    }
+}
+
+@media (min-width: 1367px) and (max-width: 1574px){
+.wrapper-top-deco-3 {
+    top:  90rem;
+    left: 45rem;
+
+}
+.wrapper-top-deco-2 {
+    top: 46rem;
+    left: 55rem;
+width:9rem;
+}
+}
+
+/* Moyenne gamme - tablettes & petits laptops */
+@media (min-width: 769px) and (max-width: 1366px) {
+    .ghost-height {
+        height: clamp(32rem, 5vw + 12rem, 64.25rem);
     }
 
     .wrapper-chevre {
-        top: 10rem;
-        left: 3rem;
+        top: 20rem;
     }
 
+    .wrapper-top-deco-2 {
+        top: clamp(45rem, 1vw + 45rem, 53rem);
+        left: 33rem;
+        width: 9rem;
+    }
+
+    .wrapper-top-deco-3 {
+        display: none;
+    }
 
     .wrapper-edelweiss {
-        left: min(40rem, max(25rem, 20vw));
+        left: min(55rem, max(40rem, 35vw));
     }
-
-    .oiseaux-2 {
+    
+        .oiseaux-2 {
         width: 15rem;
-        left: 15rem;
+top: 67rem;
+left: 30rem;
+    }
+.wrapper-top-deco-4 {
+    top:clamp(130rem, 2.5vw + 130rem, 135rem);
+    width: 9rem;
+}
+}
+
+
+@media (min-width: 769px) and (max-width: 1265px) {
+      .wrapper-top-deco-2 {
+display:none; 
+    }
+}
+
+@media (min-width: 769px) and (max-width: 850px){
+    .ghost-height {
+        height: 29rem;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 930px){
+    .wrapper-top-deco-1 {
+    position: relative;
+    left: clamp(2rem, 10vw, 20rem);
+top:-5rem;
+    width: clamp(10rem, 12vw, 15rem);
+}
+}
+
+@media (min-width: 769px) and (max-width: 930px){
+    .wrapper-top-deco-1 {
+    position: relative;
+    left: clamp(2rem, 10vw, 20rem);
+top:-5rem;
+    width: clamp(10rem, 12vw, 15rem);
+}
+}
+
+/* téléphone Fernando */
+
+@media screen and (max-width: 835px) {
+    .menu-telephone {
+        display: flex;
     }
 
+    .desktop {
+        display: none;
+    }
 }
 
 @media (max-width: 768px) {
-    .wrapper-top-deco-2 {
+
+    .wrapper-top-deco-1, .wrapper-top-deco-2 {
         display: none;
 
     }
@@ -56,6 +125,9 @@
     .wrapper-edelweiss {
         display: none;
     }
+    .wrapper-top-deco-2 {
+    display:none;
+}
 
     /* Grid responsive */
 .photos-flex{
@@ -112,7 +184,6 @@
     max-width: 90vw;
   }
 
-
     /* footer wrap */
     .footer-flex {
         display: flex;
@@ -125,70 +196,43 @@
         flex-direction: column;
         align-items: center;
     }
+
 }
 
-
-/* téléphone Fernando */
-
-@media screen and (max-width: 835px) {
-    .menu-telephone {
-        display: flex;
-    }
-
-    .desktop {
-        display: none;
-    }
-}
-
-
-/* Moyenne gamme - tablettes & petits laptops (cacher svg montagne) */
-@media (min-width: 769px) and (max-width: 1366px) {
+/* Petit écran */
+@media (min-width: 481px) and (max-width: 768px) {
     .ghost-height {
-        height: clamp(32rem, 5vw + 12rem, 64.25rem);
+        /* height: clamp(8rem, 5vw + 19rem, 44rem); */
+        height: min(18rem, max(5vw + 19rem));
     }
 
     .wrapper-chevre {
-        top: 20rem;
-    }
-
-    .wrapper-top-deco-2 {
-        top: 53rem;
-        left: 33rem;
-        width: 10rem;
-
-    }
-
-    .wrapper-top-deco-3 {
-        display: none;
+        top: 10rem;
+        left: 3rem;
     }
 
     .wrapper-edelweiss {
-        left: min(55rem, max(40rem, 35vw));
+        left: min(40rem, max(25rem, 20vw));
+    }
+
+    .oiseaux-2 {
+        width: 15rem;
+        left: 15rem;
     }
 
 }
 
 
-
-
-
-/* Desktop standard */
-@media (min-width: 1367px) and (max-width: 1920px) {
+/* Mobile - jusqu'à 480px */
+@media (max-width: 480px) {
     .ghost-height {
-        height: min(max(50rem, 60rem), 80rem);
+        height: 8rem;
     }
+
+    .wrapper-chevre {
+        top: 10rem;
+        left: 5rem;
+    }
+
 }
 
-/* Ultra-wide */
-@media (min-width: 1921px) and (max-width: 2560px) {
-    .ghost-height {
-        height: 74rem;
-    }
-}
-
-/* Au-delà du raisonnable */
-@media (min-width: 2561px) {
-    .ghost-height {
-        height: 100rem;
-    }
-}

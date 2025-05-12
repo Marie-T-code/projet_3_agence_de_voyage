@@ -104,6 +104,23 @@ html, body {
   overscroll-behavior: contain;
 }
 
+/* overrride des animations */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-delay: -1ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    background-attachment: initial !important;
+    scroll-behavior: auto !important;
+    transition-duration: 1ms !important;
+    transition-delay: -1ms !important;
+  }
+}
+
+
 
 /* VARIABLES */
 
@@ -707,7 +724,7 @@ article {
     left: clamp(2rem, 10vw, 20rem);
     top: 0rem;
     z-index: 5;
-    width: clamp(10rem, 20vw, 25rem);
+    width: clamp(10rem, 15vw, 20rem);
 }
 
 .top-deco-1 {
@@ -716,9 +733,9 @@ article {
 
 .wrapper-top-deco-2 {
     position: relative;
-    top: 53rem;
-    left: 50rem;
-    width: 13rem;
+    top: 52rem;
+    left: 55rem;
+    width: 10rem;
     z-index: 5;
 }
 
@@ -729,8 +746,8 @@ article {
 .wrapper-top-deco-3 {
     position: relative;
     top: 97rem;
-    left: 45rem;
-    width: 13rem;
+    left: 55rem;
+    width: 10rem;
 }
 
 .top-deco-3 {
@@ -739,8 +756,8 @@ article {
 
 .wrapper-top-deco-4 {
     position: relative;
-    width: 13rem;
-    top: 150rem;
+    width: 10rem;
+    top:  145rem;
     left: 25rem;
 }
 
@@ -805,9 +822,9 @@ article {
 
 .oiseaux-2 {
     position: absolute;
-    top: 45rem;
+    top: 55rem;
     width: 20rem;
-    left: 15rem;
+    left: 50rem;
     z-index: 6;
     fill: var(--dark-blue);
     filter: drop-shadow(0 0.1rem 0.3rem rgba(0, 53, 89, 0.405));
@@ -887,6 +904,3 @@ footer li:hover {
     border: none;
 }
 
-/* *{
-    outline:1px solid red; 
-} */
