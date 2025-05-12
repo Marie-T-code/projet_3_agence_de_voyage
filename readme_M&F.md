@@ -49,6 +49,7 @@ Nous en avons également profité pour découvrir ou approfondir la création de
 - **Leaflet.js** pour la cartographie
 - **Bootstrap Icons** + **Font Awesome** pour l’iconographie
 - **Google Fonts** (Poppins)
+- **Qgis** création de couches géolocalisées pour export en GeoJSON
 
 ### 🎨 Outils de design et production visuelle
 
@@ -64,6 +65,15 @@ Nous en avons également profité pour découvrir ou approfondir la création de
 - Le formulaire de recherche est visuel et non fonctionnel (pas de validation dynamique).
 - Certaines sections décoratives (SVG) sont masquées ou repositionnées selon les écrans.
 - Le site intègre des bases d’**accessibilité** (`aria-label`, `alt`, `sr_only`, etc.).
+
+---
+
+## 🌐 Ressources & inspirations
+
+- SVGs décoratifs : [SVGRepo](https://www.svgrepo.com), [lucide](https://lucide.de), [Pexels](https://www.pexels.com)
+- Icônes : [Bootstrap Icons](https://icons.getbootstrap.com), [Font Awesome](https://fontawesome.com)
+- Cartographie : [Leaflet](https://leafletjs.com/)
+- Inspirations : [Awwwards](https://www.awwwards.com)
 
 ---
 
