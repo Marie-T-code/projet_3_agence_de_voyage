@@ -36,7 +36,7 @@ Utile pour des mises en page pleine hauteur (par exemple, en flex ou grid).
 */
 body {
     min-height: 100vh;
-    background-color: rgb(35, 52, 93);
+    background-color: var(--darkest-blue);
 }
 
 /* 
@@ -80,19 +80,140 @@ figcaption {
 
 
 .padding-harmo {
-    padding: 0.6rem 8vw;
+    padding: 0.6rem max(1rem, 8vw);
 }
 
-.padding-top{ 
-    padding-top: 1rem;
+.padding-top {
+    padding-top: clamp(0.5rem, 2vw, 1rem);
 }
 
 
-a, a:link,  a:visited, a:hover, a:focus, a:active {
-    color: black;
+a,
+a:link,
+a:visited,
+a:hover,
+a:focus,
+a:active {
+    color: var(--black);
     text-decoration: none;
     cursor: pointer;
 }
+
+/* empêcher les rebonds en bord de scroll sur les scrolls verticaux en mobile */
+html, body {
+  overscroll-behavior: contain;
+}
+
+
+/* VARIABLES */
+
+:root {
+    --black: rgb(0, 0, 0);
+    --shadow-dark: rgba(0, 0, 0, 0.7);
+    --darkest-blue: rgb(0, 53, 89);
+    --dark-blue: rgb(0, 75, 124);
+    --blue: rgb(3, 117, 155);
+    --light-blue: rgb(0, 191, 255);
+    --lightest-blue: rgb(192, 223, 231);
+    --white: rgb(255, 255, 255);
+
+}
+
+
+/* TYPOS */
+
+h1 {
+    color: var(--white);
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: clamp(2.5rem, 6vw, 5.625rem);
+    box-sizing: border-box;
+    text-shadow: 2px 2px 0.5rem var(--shadow-dark);
+    margin-top: 15%;
+    align-items: center;
+}
+
+.ss-t-hero {
+    font-family: "Poppins", sans-serif;
+    color: var(--white);
+    text-align: center;
+    font-weight: bold;
+    font-size: clamp(1.75rem, 4vw, 3.125rem);
+    margin-top: -0.6rem;
+    text-shadow: 2px 2px 0.5rem var(--shadow-dark);
+}
+
+
+h2 {
+    font-size: clamp(1.25rem, 3vw, 2rem);
+    font-weight: 800;
+    background-color: var(--white);
+    max-width: 60ch;
+    margin: 0 auto;
+    padding: 1.5rem;
+    text-align: center;
+    border-radius: 0.625rem;
+}
+
+h3 {
+    font-size: clamp(1.25rem, 3vw, 1.5rem);
+    padding: clamp(0.75rem, 2.5vw, 1.5rem);
+    font-weight: 600;
+}
+
+p {
+    font-size: clamp(0.875rem, 1.75vw, 1rem);
+    font-weight: 300;
+    line-height: 1.5em;
+}
+
+/* typos footer */
+
+.brands {
+    font-size: clamp(0.875rem, 2vw, 1rem);
+    font-weight: 700;
+}
+
+.slogan {
+    font-size: clamp(0.75rem, 1.2vw, 0.875rem);
+    font-weight: 300;
+}
+
+.footer-subtitles {
+    text-align: center;
+    font-size: clamp(0.875rem, 1.8vw, 1rem);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.textes {
+    line-height: 1.5rem;
+}
+
+.contact-info {
+    color: var(--blue);
+    text-align: center;
+    max-width: 30ch;
+}
+
+.mentions-legales p {
+    font-size: clamp(0.625rem, 0.4rem + 0.5vw, 0.75rem);
+    padding: clamp(0.5rem, 2vw, 1rem);
+}
+
+.contact a {
+    font-size: inherit;
+    font-weight: inherit;
+    text-decoration: none;
+}
+
+
+
+
+
+
+/* HERO */
 
 .hero {
     background-image: url(../img/section_hero/hero_hotel.png);
@@ -102,9 +223,16 @@ a, a:link,  a:visited, a:hover, a:focus, a:active {
     min-height: 100svh;
     position: relative;
 }
-.hero a, a:link,  a:visited, a:hover, a:focus, a:active {
-    color: #03759b;
+
+.hero a,
+a:link,
+a:visited,
+a:hover,
+a:focus,
+a:active {
+    color: var(--blue);
 }
+
 .logo img {
     max-width: 5em;
     margin-top: 0.6rem;
@@ -117,122 +245,107 @@ a, a:link,  a:visited, a:hover, a:focus, a:active {
 }
 
 .top-nav {
-    background-image: linear-gradient(to bottom, #c5c5c5, #c5c5c58f, transparent);
+    background-image: linear-gradient(to bottom, #c5c5c5, #c4c4c48f, transparent);
 
 }
+
 /* FERNANDO MENU TELEPHONE START */
 
 
 .menu-telephone {
     background-color: transparent;
     backdrop-filter: blur(20px);
-    width: 80px;
-    height: 100vh;
+    max-width: 80px;
+    min-height: 100vh;
     /* padding: 20px; */
     position: fixed;
     padding: 20px 0 0px 0.5%;
-    box-shadow: 3px 0 0 #00bfff;
+    box-shadow: 3px 0 0 var(--light-blue);
     margin-top: -10px;
     top: 0;
     left: -30px;
     overflow: hidden;
     transition: 0.2s;
-  }
-  
-  .menu-telephone:hover {
-    width: 300px;
-  }
-  
-  .item-menu a {
+}
+
+.menu-telephone:hover {
+    max-width: 300px;
+}
+
+.item-menu a {
     color: rgb(205, 205, 205);
     text-decoration: none;
     display: flex;
     margin-bottom: 5px;
     gap: 20px;
-   font-size:1.5rem;
+    font-size: 1.5rem;
     /* line-height: 40px; */
-  }
-  .menu-telephone li {
+}
+
+.menu-telephone li {
     list-style: none;
     transform: 0.2s;
-    margin-left:0.4rem;
-  }
-  .menu-telephone li:hover {
-    width: 135%;
-    background-color: #00bfff;
-  }
-  
-  .menu-dst {
+    margin-left: 0.4rem;
+}
+
+.menu-telephone li:hover {
+    max-width: 135%;
+    background-color: var(--light-blue);
+}
+
+.menu-dst {
     display: flex;
     justify-content: space-between;
-    width: 80%;
-    height: 20%;
+    max-width: 80%;
+    min-height: 20%;
     line-height: 40px;
-  
+
     margin-left: 120px;
-  }
-  
-  .incon i {
+}
+
+.incon i {
     margin-left: 10px;
-  }
-  .item-menu a:hover {
-    color: rgb(255, 255, 255);
-  }
+}
 
-  .item-menu a .txt-link:hover {
-    color: rgb(255, 255, 255);
-  }
-  @media screen and (max-width: 835px) {
-    .menu-telephone {
-      display: none;
-    }
-    .menu-desktop {
-      display: none;
-    }
-  }
-  
-  .menu-telephone {
-    display:flex;
-    z-index:145;
-  }
+.item-menu a:hover {
+    color: var(--white);
+}
+
+.item-menu a .txt-link:hover {
+    color: var(--white);
+}
 
 
-  @media screen and (max-width: 835px) {
-    .menu-telephone {
-      display: none;
-    }
-    .menu-desktop {
-      display: none;
-    }
-  }
+.menu-telephone {
+    display: none;
+    z-index: 145;
+}
+
 
 .menu-telephone ul {
-    display: flex; 
+    display: flex;
     flex-flow: column nowrap;
     align-items: stretch;
     gap: 5rem;
 }
 
-.menu-telephone li{
-    /* flex-grow: 1; 
-    flex-shrink: 2; 
-    flex-basis: 1;  */
+.menu-telephone li {
     padding-left: 10px;
 }
-  
+
 
 /* FERNANDO MENU TELEPHONE END */
 
 .descktop,
 ul {
-    color: white;
+    color: var(--white);
     text-decoration: none;
     list-style-type: none;
     display: flex;
     gap: 1.875rem;
     padding: 0.6rem 1.5rem;
     font-weight: bold;
-    color: #03759b;
+    color: var(--blue);
     transition: 0.5s;
 }
 
@@ -243,8 +356,8 @@ ul li {
 
 .descktop,
 ul li:hover {
-    background-color: #00bfff;
-    color: #ffffff;
+    background-color: var(--light-blue);
+    color: var(--white);
     border-radius: 0.6rem;
 }
 
@@ -258,35 +371,14 @@ ul li:hover {
     margin-top: 3rem;
 }
 
-h1 {
-    color: white;
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: 900;
-    font-size: 5.625rem;
-    box-sizing: border-box;
-    text-shadow: 2px 2px 0.5rem rgba(0, 0, 0, 0.7);
-    margin-top: 15%;
-    align-items: center;
-}
-
-.ss-t-hero {
-    font-family: "Poppins", sans-serif;
-    color: white;
-    text-align: center;
-    font-weight: bold;
-    font-size: 3.125rem;
-    margin-top: -0.6rem;
-    text-shadow: 2px 2px 0.5rem rgba(0, 0, 0, 0.7);
-}
 
 /* fondu bleu foncé */
 .fondu_bf {
     width: 100%;
-    height: 15rem;
-    position: absolute; 
-    bottom:0; 
-    background-image: linear-gradient(to bottom, transparent, rgb(35, 52, 93));
+    height: clamp(8rem, 12vw, 15rem);
+    position: absolute;
+    bottom: 0;
+    background-image: linear-gradient(to bottom, transparent, var(--darkest-blue));
 }
 
 /* SECTION GRID CARROUSSEL */
@@ -294,29 +386,35 @@ h1 {
 
 .hotel_ph_d {
     /* hotel photo display */
-    background-color: rgb(35, 52, 93);
+    background-color: (--darkest-blue);
 
     position: relative;
 }
 
 /* BARRE DE RECHERCHE */
 .container_dispos_boutons {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    padding-block: clamp(0.75rem, 2.5vw, 1.5rem);
+    /* padding-block: padding top et bottom en une commande */
     border-radius: 2px;
-    background-color: #4360A9;
+    background-color: var(--dark-blue);
     margin-top: 3rem;
     margin-bottom: 3rem;
 }
 
 .hotel-form {
     display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    gap: 6rem;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+     padding-inline: max(1.25rem, min(3rem, 3vw));
+}
+.hotel-form > * {
+    flex: 1 1 6rem;  
+    box-sizing:border-box; 
+    min-width:10rem; 
+    max-width: 15rem; 
+
 }
 
 /* Masque visuellement le contenu mais le rend accessible aux lecteurs d’écran.
@@ -353,26 +451,26 @@ h1 {
 
 .icon-loupe {
     box-sizing: border-box;
-    max-height: 1.2rem;
+    min-height: 1.2rem;
+    max-height:2rem;
 }
 
 form .btn-harmo {
-
-    height: 1.5rem;
+cursor: pointer;
 }
 
 .harmo-form {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 7.5rem;
-    height: 3rem;
-    padding: 0 0.5rem;
+    max-width: 7.5rem;
+    min-height: 3rem;
+    padding: 0 0.7rem;
     box-sizing: border-box;
 }
 
 .champ-style {
-    background-color: #d8d8d8;
+    background-color: (--lightest-blue);
     border: none;
     border-radius: 3px;
     padding: 0.6rem;
@@ -384,13 +482,11 @@ form .btn-harmo {
     position: relative;
     padding-top: 2rem;
 }
-.wrapper-ph-gal img{
-}
+
 .photos-flex {
     display: flex;
     flex-flow: row nowrap;
-    padding-left: 3rem;
-    padding-right: 3rem;
+padding-inline: clamp(1rem, 5vw, 3rem);
 }
 
 
@@ -408,22 +504,26 @@ form .btn-harmo {
     transform: translateY(-50%);
     /* centrage parfait de la flèche  */
     z-index: 2;
+    width: clamp(2.5rem, 4vw, 4rem);
+    height: clamp(2.5rem, 4vw, 4rem);
     cursor: pointer;
     padding: 0.5rem;
 }
 
 .chevron svg {
-    width: 4rem;
-    height: 4rem;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .chevron:first-child {
-    color: white;
+    color: var(--white);
     left: -2rem;
 }
 
 .chevron:last-child {
-    color: white;
+    color: var(--white);
     right: -2rem;
 }
 
@@ -434,8 +534,8 @@ form .btn-harmo {
 }
 
 .img-cell img {
-    width: 100%;
-    height: 100%;
+    max-width: 100%;
+    min-height: 100%;
     object-fit: cover;
     border-radius: 1rem;
 }
@@ -450,6 +550,7 @@ form .btn-harmo {
     grid-row-start: 2;
     grid-row-end: 3;
 }
+
 .boite-photos:hover .img-cell {
     filter: brightness(0.5);
 }
@@ -458,9 +559,20 @@ form .btn-harmo {
     filter: brightness(1);
 }
 
+.illustration-oiseaux {
+    position: relative;
+    left: 16vw;
+    right: 16vw;
+    max-width: clamp(16rem, 50vw, 80vw);
+    min-height: clamp(20rem, 60vh, 42rem);
+    z-index: -1;
+    margin-bottom: min(8vw, 10rem);
+}
+
 .illustration-oiseaux svg {
-    fill: white;
-    width: 100%;
+    position: absolute;
+    fill: var(--white);
+    max-width: clamp(20rem, 60vw, 80vw);
     height: auto;
 }
 
@@ -468,16 +580,17 @@ form .btn-harmo {
 /* UNE DESTINATION DE REVE */
 
 .presentation {
-    background-image: linear-gradient(to bottom, rgb(35, 52, 93) 0%, rgb(207, 208, 212) 19%, rgb(182, 199, 237) 100%);
+    background-image: linear-gradient(to bottom, var(--darkest-blue) 0%, rgb(207, 208, 212) 19%, var(--lightest-blue) 100%);
 }
-.ghost-height{
+
+.ghost-height {
     height: clamp(64.25rem, 3vw + 12rem, 100rem);
 }
 
 .wrapper-montagnes {
     position: relative;
-    width: 100vw;
-z-index:2;
+    max-width: 100vw;
+    z-index: 2;
 }
 
 .wrapper-montagnes svg {
@@ -488,45 +601,49 @@ z-index:2;
 }
 
 .montagne-1 {
-    fill: rgb(35, 52, 93);
+    fill: var(--darkest-blue);
 }
 
 .wrapper-montagnes .montagne-2 {
-    fill: rgb(57, 85, 151);
+    fill: var(--dark-blue);
 }
 
 .montagne-3 {
-    fill: rgb(91, 131, 225);
+    fill: var(--blue);
 }
 
-/* RESPONSIVE A PREVOIR */
 
-.wrapper-montagnes .edelweiss {
-    color: white;
-    fill: white;
-    width: clamp(8rem, 11vw, 12rem);
-    top: clamp(8rem, 10vh, 12rem);
-    left: clamp(40rem, 65vw, 65rem);
+.wrapper-edelweiss {
+    position: relative;
+    left: 55rem;
+    top: 10rem;
+    width: clamp(4rem, 11vw, 12rem);
+    height: clamp(4rem, 6vw, 7.5rem);
+    z-index: 2;
 }
 
-/* RESPONSIVE A PREVOIR (clamp mini fucked up ptet virer les svg) */
+.wrapper-edelweiss .edelweiss {
+    position: absolute;
+    color: var(--white);
+    width: 100%;
+}
+
+
+.wrapper-chevre {
+    position: relative;
+    max-width: clamp(5rem, 10vw, 12rem);
+    top: 40rem;
+    left: 0.1rem;
+    z-index: 1;
+}
+
 .wrapper-montagnes .chevre {
-    color: white;
-    fill: white;
-    width: clamp(5rem, 10vw, 12rem);
-    top: clamp(0.1rem, 35rem, 50rem);
-    left: clamp(3rem, 5vw, 8rem);
+    color: var(--white);
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
-h2 {
-    font-size: 1.25rem;
-    font-weight: 800;
-    background-color: white;
-    margin: 0 16rem;
-    padding: 1.5rem;
-    text-align: center;
-    border-radius: 0.625rem;
-}
 
 .padding-pres {
     padding-bottom: 13rem;
@@ -534,80 +651,101 @@ h2 {
 
 .ilustration-presentation {
     position: relative;
-    height: auto; 
-    padding:0; 
-    margin:0;
+    height: auto;
+    padding: 0;
+    margin: 0;
     overflow: visible;
-    display:block; 
-  }
+    display: block;
+}
 
 /* section description flex (photos => responsive scrset GIMP a faire) */
 
 .presentation-flex {
-    /* margin-top: 13rem; */
     padding-top: 13rem;
-    background-image: linear-gradient(to bottom, rgb(91, 131, 225), rgb(151, 172, 222));
+    background-image: linear-gradient(to bottom, var(--blue) -20%, var(--blue) 20%, var(--light-blue) 100%);
     position: relative;
 }
 
 .desc-texte {
-    background-color: rgb(198, 207, 228);
+    background-color: var(--lightest-blue);
     box-shadow: 6px 6px 0.9rem white;
     align-self: center;
-    padding: 3rem;
+    padding: clamp(1rem, 4vw, 3rem);
 }
 
-h3 {
-    font-size: 1.125rem;
-    padding: 1rem;
-    font-weight: 600;
-}
+
 
 article {
     display: flex;
-    gap: 7rem;
-    margin: 15rem 5rem;
+    flex-wrap: nowrap; 
+    gap: clamp(2rem, 5vw, 7rem);
+    margin: clamp(6rem, 12vw, 16rem) clamp(1rem, 3vw, 3rem);
 }
 
 .desc-photo {
     display: flex;
     flex-flow: column nowrap;
     gap: 1rem;
-    max-height: 35rem;
+    width: clamp(30rem, 60%, 60rem);
+    height: 35rem;
     overflow-y: auto;
-    scroll-behavior: smooth;
 }
 
 .desc-photo img {
-    max-width: 30rem;
+    width: clamp(30rem, 50vw, 45rem);
+    height: auto;
 }
 
 .svg-deco-pres {
     position: absolute;
     width: clamp(8rem, 10vw, 14rem);
-    color: white;
+    color: var(--white);
+}
+
+.wrapper-top-deco-1 {
+    position: relative;
+    left: clamp(2rem, 10vw, 20rem);
+    top: 0rem;
+    z-index: 5;
+    width: clamp(10rem, 20vw, 25rem);
 }
 
 .top-deco-1 {
+    width: 100%;
+}
 
-    left: 25rem;
-    top:10rem;
-    z-index:5; 
+.wrapper-top-deco-2 {
+    position: relative;
+    top: 53rem;
+    left: 50rem;
+    width: 13rem;
+    z-index: 5;
 }
 
 .top-deco-2 {
-    top: 55rem;
-    left: 65rem;
+    width: 100%;
+}
+
+.wrapper-top-deco-3 {
+    position: relative;
+    top: 97rem;
+    left: 45rem;
+    width: 13rem;
 }
 
 .top-deco-3 {
-    top: 97rem;
-    left: 45rem;
+    width: 100%;
+}
+
+.wrapper-top-deco-4 {
+    position: relative;
+    width: 13rem;
+    top: 150rem;
+    left: 25rem;
 }
 
 .top-deco-4 {
-    top: 150rem;
-    left: 25rem;
+    width: 100%;
 }
 
 /* INFOS PRATIQUES */
@@ -615,24 +753,24 @@ article {
 .infos-prat {
     position: relative;
     min-height: 40rem;
-    padding-bottom: 15rem;
-    background-color: rgb(151, 172, 222);
-    background-image: linear-gradient(to bottom, rgb(151, 172, 222) 0%, rgb(240, 239, 239) 70%, rgb(255, 255, 255)100%);
+    padding-bottom: clamp(6rem, 15vw, 15rem);
+    /* background-color: var(--lightest-blue); */
+    background-image: linear-gradient(to bottom, var(--light-blue) 0%, var(--lightest-blue) 50%, var(--white) 70%, var(--white)100%);
 }
 
 
 
 .infos-map {
     display: flex;
-    flex-flow: row no wrap;
-    gap: 10rem;
+    flex-flow: row nowrap;
+    gap: clamp(1.5rem, 5vw, 8rem);
     position: relative;
     z-index: 2;
-    padding-top: 10rem;
+    padding-top: clamp(3rem, 6vw, 10rem);
 }
 
 .infos-txt {
-    flex-basis: 0.8;
+    flex-basis: 30%;
 }
 
 .infos-txt>ul {
@@ -641,115 +779,114 @@ article {
 }
 
 .map {
-    width: 60rem;
+    width: clamp(18rem, 40vw, 32rem);
+    min-height: 12rem;
     background-color: rgb(35, 52, 93);
+    flex-grow: 2;
 }
-.illustrations{
-    position: absolute; 
+
+.illustrations {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+
 }
+
 
 .montagne-4 {
     fill: rgb(255, 255, 255);
     position: absolute;
     top: 8rem;
+    height: 50rem;
+    width: 100vw;
     z-index: 1;
 }
 
 .oiseaux-2 {
     position: absolute;
-    width: 35rem;
-    left: 25rem;
-    z-index: 2;
-    filter:drop-shadow(0 0.1rem 0.3rem rgba(35, 52, 93, 0.405))
+    top: 45rem;
+    width: 20rem;
+    left: 15rem;
+    z-index: 6;
+    fill: var(--dark-blue);
+    filter: drop-shadow(0 0.1rem 0.3rem rgba(0, 53, 89, 0.405));
 }
 
 /* footer */
 
-footer{
-    display: flex; 
-    flex-flow:column nowrap;
-    background-color: white;
-    color:rgb(35, 52, 93)
+footer {
+    display: flex;
+    flex-flow: column nowrap;
+    background-color: var(--white);
+    color: var(--dark-blue);
 }
 
-.footer-flex{
-    display: flex; 
-    justify-content:space-between;
+.footer-flex {
+    display: flex;
+    justify-content: space-between;
     padding: 1rem;
 }
 
-.branding-flex{
-    display: flex; 
-    justify-content:space-between; 
-    align-items: center; 
-    border-bottom: solid 1px #4360A9;
-    padding: 1rem; 
+.branding-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 1px var(--blue);
+    padding: 1rem;
 }
 
-.logos-footer{
+.logos-footer {
     max-width: 5rem;
     margin-top: 0.6rem;
 }
-.textes{
-    line-height: 1.25rem ;
-}
-.brands{
-    font-size: 1rem; 
-    font-weight: 700; 
+
+footer ul {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-content: center;
+    gap: 0.125rem;
 }
 
-.slogan{
-    font-size: 0.875rem; 
-    font-weight: 300;
+footer li {
+    transition: none;
+    padding: 0;
+    font-weight: 200;
+    color: var(--blue);
 }
 
-.mentions-legales{
+footer li:hover {
+    background-color: transparent;
+    color: inherit;
+    border-radius: 0;
+    cursor: pointer;
+}
+
+.contact {
+    padding-bottom: 1.125rem;
+}
+
+.mentions-legales {
     display: flex;
     justify-content: space-between;
-    font-size: 0.75rem;
-    padding: 1rem;
-}
-
-.footer-subtitles{
-    text-align: center; 
-    font-size: 1rem;
-    font-weight: 600;
-    text-transform: uppercase;
-}
-
-footer ul{
-    display: flex; 
-    flex-flow: column nowrap; 
-    justify-content: center; 
-    align-content: center; 
-    gap:0.125rem;
-}
-
-footer li{
- transition: none;
- padding:0; 
- font-weight: 200; 
- color: black; 
-}
-
-footer li:hover{
-    background-color: transparent; 
-    color: inherit; 
-    border-radius: 0; 
-    cursor:pointer; 
 }
 
 /* BOUTON STICKY */
 
-.logo-sticky{
-    position: fixed; 
+.logo-sticky {
+    position: fixed;
     bottom: clamp(2rem, 5vh, 4rem);
-    right: 2rem;
+    right: 0rem;
     max-width: 6rem;
-    filter: drop-shadow(0.3rem 0.3rem 0.3rem rgb(35, 52, 93));
-    z-index:999;
+    filter: drop-shadow(0.3rem 0.3rem 0.3rem var(--darkest-blue));
+    z-index: 999;
     background: none;
-    padding: 0; /* crucial */
+    padding: 0;
+    /* crucial */
     border: none;
 }
 
+/* *{
+    outline:1px solid red; 
+} */
