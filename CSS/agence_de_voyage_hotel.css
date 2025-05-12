@@ -80,11 +80,11 @@ figcaption {
 
 
 .padding-harmo {
-    padding: 0.6rem 8vw;
+    padding: 0.6rem max(1rem, 8vw);
 }
 
 .padding-top {
-    padding-top: 1rem;
+    padding-top: clamp(0.5rem, 2vw, 1rem);
 }
 
 
@@ -97,6 +97,11 @@ a:active {
     color: var(--black);
     text-decoration: none;
     cursor: pointer;
+}
+
+/* empêcher les rebonds en bord de scroll sur les scrolls verticaux en mobile */
+html, body {
+  overscroll-behavior: contain;
 }
 
 
@@ -113,6 +118,100 @@ a:active {
     --white: rgb(255, 255, 255);
 
 }
+
+
+/* TYPOS */
+
+h1 {
+    color: var(--white);
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: clamp(2.5rem, 6vw, 5.625rem);
+    box-sizing: border-box;
+    text-shadow: 2px 2px 0.5rem var(--shadow-dark);
+    margin-top: 15%;
+    align-items: center;
+}
+
+.ss-t-hero {
+    font-family: "Poppins", sans-serif;
+    color: var(--white);
+    text-align: center;
+    font-weight: bold;
+    font-size: clamp(1.75rem, 4vw, 3.125rem);
+    margin-top: -0.6rem;
+    text-shadow: 2px 2px 0.5rem var(--shadow-dark);
+}
+
+
+h2 {
+    font-size: clamp(1.25rem, 3vw, 2rem);
+    font-weight: 800;
+    background-color: var(--white);
+    max-width: 60ch;
+    margin: 0 auto;
+    padding: 1.5rem;
+    text-align: center;
+    border-radius: 0.625rem;
+}
+
+h3 {
+    font-size: clamp(1.25rem, 3vw, 1.5rem);
+    padding: clamp(0.75rem, 2.5vw, 1.5rem);
+    font-weight: 600;
+}
+
+p {
+    font-size: clamp(0.875rem, 1.75vw, 1rem);
+    font-weight: 300;
+    line-height: 1.5em;
+}
+
+/* typos footer */
+
+.brands {
+    font-size: clamp(0.875rem, 2vw, 1rem);
+    font-weight: 700;
+}
+
+.slogan {
+    font-size: clamp(0.75rem, 1.2vw, 0.875rem);
+    font-weight: 300;
+}
+
+.footer-subtitles {
+    text-align: center;
+    font-size: clamp(0.875rem, 1.8vw, 1rem);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.textes {
+    line-height: 1.5rem;
+}
+
+.contact-info {
+    color: var(--blue);
+    text-align: center;
+    max-width: 30ch;
+}
+
+.mentions-legales p {
+    font-size: clamp(0.625rem, 0.4rem + 0.5vw, 0.75rem);
+    padding: clamp(0.5rem, 2vw, 1rem);
+}
+
+.contact a {
+    font-size: inherit;
+    font-weight: inherit;
+    text-decoration: none;
+}
+
+
+
+
+
 
 /* HERO */
 
@@ -216,18 +315,9 @@ a:active {
     color: var(--white);
 }
 
-@media screen and (max-width: 835px) {
-    .menu-telephone {
-        display: none;
-    }
-
-    .menu-desktop {
-        display: none;
-    }
-}
 
 .menu-telephone {
-    display: flex;
+    display: none;
     z-index: 145;
 }
 
@@ -281,32 +371,11 @@ ul li:hover {
     margin-top: 3rem;
 }
 
-h1 {
-    color: var(--white);
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: 900;
-    font-size: 5.625rem;
-    box-sizing: border-box;
-    text-shadow: 2px 2px 0.5rem var(--shadow-dark);
-    margin-top: 15%;
-    align-items: center;
-}
-
-.ss-t-hero {
-    font-family: "Poppins", sans-serif;
-    color: var(--white);
-    text-align: center;
-    font-weight: bold;
-    font-size: 3.125rem;
-    margin-top: -0.6rem;
-    text-shadow: 2px 2px 0.5rem var(--shadow-dark);
-}
 
 /* fondu bleu foncé */
 .fondu_bf {
-    max-width: 100%;
-    min-height: 15rem;
+    width: 100%;
+    height: clamp(8rem, 12vw, 15rem);
     position: absolute;
     bottom: 0;
     background-image: linear-gradient(to bottom, transparent, var(--darkest-blue));
@@ -324,11 +393,8 @@ h1 {
 
 /* BARRE DE RECHERCHE */
 .container_dispos_boutons {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    padding-block: clamp(0.75rem, 2.5vw, 1.5rem);
+    /* padding-block: padding top et bottom en une commande */
     border-radius: 2px;
     background-color: var(--dark-blue);
     margin-top: 3rem;
@@ -337,9 +403,18 @@ h1 {
 
 .hotel-form {
     display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    gap: 6rem;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+     padding-inline: max(1.25rem, min(3rem, 3vw));
+}
+.hotel-form > * {
+    flex: 1 1 6rem;  
+    box-sizing:border-box; 
+    min-width:10rem; 
+    max-width: 15rem; 
+
 }
 
 /* Masque visuellement le contenu mais le rend accessible aux lecteurs d’écran.
@@ -377,11 +452,11 @@ h1 {
 .icon-loupe {
     box-sizing: border-box;
     min-height: 1.2rem;
+    max-height:2rem;
 }
 
 form .btn-harmo {
-
-    min-height: 1.5rem;
+cursor: pointer;
 }
 
 .harmo-form {
@@ -390,7 +465,7 @@ form .btn-harmo {
     justify-content: center;
     max-width: 7.5rem;
     min-height: 3rem;
-    padding: 0 0.5rem;
+    padding: 0 0.7rem;
     box-sizing: border-box;
 }
 
@@ -411,8 +486,7 @@ form .btn-harmo {
 .photos-flex {
     display: flex;
     flex-flow: row nowrap;
-    padding-left: 3rem;
-    padding-right: 3rem;
+padding-inline: clamp(1rem, 5vw, 3rem);
 }
 
 
@@ -485,18 +559,18 @@ form .btn-harmo {
     filter: brightness(1);
 }
 
-.illustration-oiseaux{
-    position: relative; 
-    left: 16vw; 
-    right: 16vw; 
+.illustration-oiseaux {
+    position: relative;
+    left: 16vw;
+    right: 16vw;
     max-width: clamp(16rem, 50vw, 80vw);
-    min-height: clamp(20rem, 60vh, 42rem); 
-    z-index:-1; 
+    min-height: clamp(20rem, 60vh, 42rem);
+    z-index: -1;
     margin-bottom: min(8vw, 10rem);
 }
 
 .illustration-oiseaux svg {
-    position: absolute; 
+    position: absolute;
     fill: var(--white);
     max-width: clamp(20rem, 60vw, 80vw);
     height: auto;
@@ -510,7 +584,7 @@ form .btn-harmo {
 }
 
 .ghost-height {
-    min-height: clamp(64.25rem, 3vw + 12rem, 100rem);
+    height: clamp(64.25rem, 3vw + 12rem, 100rem);
 }
 
 .wrapper-montagnes {
@@ -538,39 +612,38 @@ form .btn-harmo {
     fill: var(--blue);
 }
 
-/* RESPONSIVE A PREVOIR */
 
-.wrapper-edelweiss{
-        position: relative; 
-  left: 50%;
-  transform: translateX(17%);
-  top: 8rem; 
-    z-index:2; 
+.wrapper-edelweiss {
+    position: relative;
+    left: 55rem;
+    top: 10rem;
+    width: clamp(4rem, 11vw, 12rem);
+    height: clamp(4rem, 6vw, 7.5rem);
+    z-index: 2;
 }
 
-.wrapper-montagnes .edelweiss {
+.wrapper-edelweiss .edelweiss {
     position: absolute;
     color: var(--white);
-    max-width: clamp(4rem, 11vw, 12rem);
+    width: 100%;
 }
 
-/* RESPONSIVE A PREVOIR (clamp mini fucked up ptet virer les svg) */
+
+.wrapper-chevre {
+    position: relative;
+    max-width: clamp(5rem, 10vw, 12rem);
+    top: 40rem;
+    left: 0.1rem;
+    z-index: 1;
+}
+
 .wrapper-montagnes .chevre {
     color: var(--white);
-    max-width: clamp(5rem, 10vw, 12rem);
-    top: clamp(0.1rem, 35rem, 50rem);
-    left: clamp(3rem, 5vw, 8rem);
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
-h2 {
-    font-size: 1.25rem;
-    font-weight: 800;
-    background-color: var(--white);
-    margin: 0 16rem;
-    padding: 1.5rem;
-    text-align: center;
-    border-radius: 0.625rem;
-}
 
 .padding-pres {
     padding-bottom: 13rem;
@@ -588,7 +661,6 @@ h2 {
 /* section description flex (photos => responsive scrset GIMP a faire) */
 
 .presentation-flex {
-    /* margin-top: 13rem; */
     padding-top: 13rem;
     background-image: linear-gradient(to bottom, var(--blue) -20%, var(--blue) 20%, var(--light-blue) 100%);
     position: relative;
@@ -598,33 +670,29 @@ h2 {
     background-color: var(--lightest-blue);
     box-shadow: 6px 6px 0.9rem white;
     align-self: center;
-    padding: 3rem;
+    padding: clamp(1rem, 4vw, 3rem);
 }
 
-h3 {
-    font-size: 1.125rem;
-    padding: 1rem;
-    font-weight: 600;
-}
+
 
 article {
     display: flex;
-    gap: 7rem;
-    margin: 15rem 5rem;
+    flex-wrap: nowrap; 
+    gap: clamp(2rem, 5vw, 7rem);
+    margin: clamp(6rem, 12vw, 16rem) clamp(1rem, 3vw, 3rem);
 }
 
 .desc-photo {
     display: flex;
     flex-flow: column nowrap;
     gap: 1rem;
-    width: clamp(10rem, 25vw, 20rem);
-    min-height: 35rem;
+    width: clamp(30rem, 60%, 60rem);
+    height: 35rem;
     overflow-y: auto;
-    scroll-behavior: smooth;
 }
 
 .desc-photo img {
-    width: clamp(10rem, 20vw, 18rem);
+    width: clamp(30rem, 50vw, 45rem);
     height: auto;
 }
 
@@ -634,26 +702,50 @@ article {
     color: var(--white);
 }
 
-.top-deco-1 {
+.wrapper-top-deco-1 {
+    position: relative;
+    left: clamp(2rem, 10vw, 20rem);
+    top: 0rem;
+    z-index: 5;
+    width: clamp(10rem, 20vw, 25rem);
+}
 
-    left: 25rem;
-    top: 10rem;
+.top-deco-1 {
+    width: 100%;
+}
+
+.wrapper-top-deco-2 {
+    position: relative;
+    top: 53rem;
+    left: 50rem;
+    width: 13rem;
     z-index: 5;
 }
 
 .top-deco-2 {
-    top: 55rem;
-    left: 65rem;
+    width: 100%;
+}
+
+.wrapper-top-deco-3 {
+    position: relative;
+    top: 97rem;
+    left: 45rem;
+    width: 13rem;
 }
 
 .top-deco-3 {
-    top: 97rem;
-    left: 45rem;
+    width: 100%;
+}
+
+.wrapper-top-deco-4 {
+    position: relative;
+    width: 13rem;
+    top: 150rem;
+    left: 25rem;
 }
 
 .top-deco-4 {
-    top: 150rem;
-    left: 25rem;
+    width: 100%;
 }
 
 /* INFOS PRATIQUES */
@@ -661,24 +753,24 @@ article {
 .infos-prat {
     position: relative;
     min-height: 40rem;
-    padding-bottom: 15rem;
+    padding-bottom: clamp(6rem, 15vw, 15rem);
     /* background-color: var(--lightest-blue); */
-    background-image: linear-gradient(to bottom, var(--light-blue) 0%, var(--lightest-blue) 70%, var(--white)100%);
+    background-image: linear-gradient(to bottom, var(--light-blue) 0%, var(--lightest-blue) 50%, var(--white) 70%, var(--white)100%);
 }
 
 
 
 .infos-map {
     display: flex;
-    flex-flow: row no wrap;
-    gap: 10rem;
+    flex-flow: row nowrap;
+    gap: clamp(1.5rem, 5vw, 8rem);
     position: relative;
     z-index: 2;
-    padding-top: 10rem;
+    padding-top: clamp(3rem, 6vw, 10rem);
 }
 
 .infos-txt {
-    flex-basis: 0.8;
+    flex-basis: 30%;
 }
 
 .infos-txt>ul {
@@ -690,6 +782,7 @@ article {
     width: clamp(18rem, 40vw, 32rem);
     min-height: 12rem;
     background-color: rgb(35, 52, 93);
+    flex-grow: 2;
 }
 
 .illustrations {
@@ -697,13 +790,16 @@ article {
     top: 0;
     left: 0;
     width: 100vw;
-    height: auto;
+
 }
+
 
 .montagne-4 {
     fill: rgb(255, 255, 255);
     position: absolute;
     top: 8rem;
+    height: 50rem;
+    width: 100vw;
     z-index: 1;
 }
 
@@ -745,34 +841,6 @@ footer {
     margin-top: 0.6rem;
 }
 
-.textes {
-    line-height: 1.25rem;
-}
-
-.brands {
-    font-size: 1rem;
-    font-weight: 700;
-}
-
-.slogan {
-    font-size: 0.875rem;
-    font-weight: 300;
-}
-
-.mentions-legales {
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.75rem;
-    padding: 1rem;
-}
-
-.footer-subtitles {
-    text-align: center;
-    font-size: 1rem;
-    font-weight: 600;
-    text-transform: uppercase;
-}
-
 footer ul {
     display: flex;
     flex-flow: column nowrap;
@@ -799,12 +867,17 @@ footer li:hover {
     padding-bottom: 1.125rem;
 }
 
+.mentions-legales {
+    display: flex;
+    justify-content: space-between;
+}
+
 /* BOUTON STICKY */
 
 .logo-sticky {
     position: fixed;
     bottom: clamp(2rem, 5vh, 4rem);
-    right: 2rem;
+    right: 0rem;
     max-width: 6rem;
     filter: drop-shadow(0.3rem 0.3rem 0.3rem var(--darkest-blue));
     z-index: 999;
@@ -813,3 +886,7 @@ footer li:hover {
     /* crucial */
     border: none;
 }
+
+/* *{
+    outline:1px solid red; 
+} */

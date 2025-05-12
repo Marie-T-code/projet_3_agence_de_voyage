@@ -1,34 +1,176 @@
 /* Mobile - jusqu'à 480px */
 @media (max-width: 480px) {
     .ghost-height {
-        height: 19rem;
+        height: 8rem;
     }
+
+    .wrapper-chevre {
+        top: 10rem;
+        left: 5rem;
+    }
+
 }
 
 /* Petit écran */
 @media (min-width: 481px) and (max-width: 768px) {
     .ghost-height {
-        height: clamp(19rem, 5vw + 19rem, 44rem);
+        /* height: clamp(8rem, 5vw + 19rem, 44rem); */
+        height: min(18rem, max(5vw + 19rem));
+    }
+
+    .wrapper-chevre {
+        top: 10rem;
+        left: 3rem;
+    }
+
+
+    .wrapper-edelweiss {
+        left: min(40rem, max(25rem, 20vw));
+    }
+
+    .oiseaux-2 {
+        width: 15rem;
+        left: 15rem;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .wrapper-top-deco-2 {
+        display: none;
+
+    }
+
+    .wrapper-top-deco-3 {
+        display: none;
+    }
+
+    .oiseaux-2 {
+        display: none;
+    }
+
+    .wrapper-top-deco-4 {
+        display: none;
+    }
+
+    .wrapper-edelweiss {
+        display: none;
+    }
+
+    /* Grid responsive */
+.photos-flex{
+    justify-content:center; 
+}
+.chevron{
+    display:none;
+}
+    .boite-photos{
+        flex-direction: column;
+        max-height:80vh;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        gap: clamp(1rem, 2vw, 2.5rem);
+        scrollbar-width: none; 
+          -webkit-overflow-scrolling: touch;
+    }
+.boite-photos::-webkit-scrollbar {
+  display: none;
+}
+    .grid-photos{
+        display:grid;
+         grid-template-columns: repeat(auto-fit, minmax(clamp(14rem, 25vw, 20rem), 1fr));
+          gap: clamp(1rem, 2vw, 2.5rem);
+          max-width:20rem;
+  place-items: center;
+    }
+      .cell-1,
+  .cell-3 {
+    grid-row-start: auto;
+    grid-row-end: auto;
+    grid-column-start: auto;
+  }
+
+  /* découvrez responsive */
+
+  article{
+    flex-flow: column nowrap; 
+    align-items: center; 
+  }
+
+  .article-reverse{
+    flex-flow: column-reverse nowrap;
+  }
+
+  /* map responsive */
+
+  .infos-map{
+    flex-direction: column; 
+  }
+
+  .map{
+    height: 25rem; 
+    max-width: 90vw;
+  }
+
+
+    /* footer wrap */
+    .footer-flex {
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    .contact {
+        flex: 1 1 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
+
+
+/* téléphone Fernando */
+
+@media screen and (max-width: 835px) {
+    .menu-telephone {
+        display: flex;
+    }
+
+    .desktop {
+        display: none;
+    }
+}
+
 
 /* Moyenne gamme - tablettes & petits laptops (cacher svg montagne) */
 @media (min-width: 769px) and (max-width: 1366px) {
     .ghost-height {
         height: clamp(32rem, 5vw + 12rem, 64.25rem);
     }
+
+    .wrapper-chevre {
+        top: 20rem;
+    }
+
+    .wrapper-top-deco-2 {
+        top: 53rem;
+        left: 33rem;
+        width: 10rem;
+
+    }
+
+    .wrapper-top-deco-3 {
+        display: none;
+    }
+
+    .wrapper-edelweiss {
+        left: min(55rem, max(40rem, 35vw));
+    }
+
 }
 
-/* téléphone Fernando */
 
- @media screen and (max-width: 835px) {
-    .menu-telephone {
-      display: none;
-    }
-    .menu-desktop {
-      display: none;
-    }
-}
+
+
 
 /* Desktop standard */
 @media (min-width: 1367px) and (max-width: 1920px) {
