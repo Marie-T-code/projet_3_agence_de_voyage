@@ -79,7 +79,7 @@ Nous en avons également profité pour découvrir ou approfondir la création de
 
 ## 🧑‍💻 Réalisé par
 
-- Fernando  
-- Marie  
+- [Fernando](https://github.com/fernando-DEVWEB)
+- [Marie](https://github.com/Marie-T-code)
 
 Cohésion assurée sur la mise en page, le responsive, les composants visuels et l’accessibilité.
