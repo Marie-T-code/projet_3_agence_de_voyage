@@ -2,6 +2,8 @@
 
 Projet réalisé dans le cadre de notre formation en développement web. Il s'agit d'une **expérience immersive de réservation d’hôtel en montagne**, accompagnée d'une page d'agence mère pour relier plusieurs offres touristiques.
 
+🔗 **Voir le site en ligne** : [https://marie-t-code.github.io/projet_3_agence_de_voyage/](https://marie-t-code.github.io/projet_3_agence_de_voyage/)
+
 Le but du projet était de :
 - **créer notre premier projet en équipe**,
 - **maîtriser les bases de CSS et HTML vanilla**,
