@@ -11,6 +11,11 @@ Le but du projet était de :
 
 Nous en avons également profité pour découvrir ou approfondir la création de design sur **Figma**.
 
+## 🎨 Aperçu de la maquette Figma
+
+[![Maquette agence](./img/figma/figma_agence.png)](./img/figma/figma_agence.png)
+[![Maquette hotel](./img/figma/figma_hotel.png)](./img/figma/figma_hotel.png)
+
 ---
 
 ## 🗂 Structure du projet
